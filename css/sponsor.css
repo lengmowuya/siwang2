@@ -247,7 +247,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-left: 6px;
-  width: 30%;
+  width: 28%;
 }
 #List ul li .info .userName {
   color: #fff;
@@ -267,7 +267,7 @@ body {
   margin-top: 16px;
 }
 #List ul li .AwardBlock {
-  width: 30%;
+  width: 40%;
   display: flex;
   color: tomato;
   align-items: center;
