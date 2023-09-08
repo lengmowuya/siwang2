@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空间站-周年赞助</title>
+    <link rel="stylesheet" href="./css/sponsor.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="icon" href="https://sc2.nosdn.127.net/1/style/images/sc2.ico" type="image/x-icon"/>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="nav">
+        <div class="logo"><img src="./assets//死亡空间站.png" alt=""></div>
+
+        <ul>
+            <!-- <li><a href="/">首页</a></li> -->
+            <li><a href="/bulletin.html">公告</a></li>
+            <li class="active"><a href="/index2.html">活动</a></li>
+            <!-- <li>文档</li> -->
+        </ul>   
+    </div>
+    <div id="pageCenter">
+        <div class="title">
+            <!-- <p class="logo" style="width: 50%;"><img src="./assets//死亡空间站.png" alt=""></p> -->
+            <p class="main">《死亡空间站2》亚服赞助2.0</p>
+
+            <!-- <span class="time">截止时间3月20日</span> -->
+            <!-- <div class="rantInfo">
+                <span class="white">
+                <p class="must">排行榜前10名每人一个传奇随从【奥丁】</p>
+            </div> -->
+        </div>
+    
+        <div id="List">
+            <div class="awardMoney">
+
+                <div class="box">
+                    <img src="./assets/icon/死亡水晶.png" alt="">
+                    <p class="hintTitle">600,000</p>
+                </div>
+
+                <span class="hintInfo">
+                    奖池随全体累计赞助额度不断扩大,活动结束每个赞助玩家平分奖池
+                </span>
+                <span class="moneyInfo">
+                    倒计时：90天 20小时 40分钟
+                </span>
+            </div>
+            <div class="List_image">
+                <div class="list_topImage"></div>
+                <div class="list_bottomImage"></div>
+            </div>
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <script>
+        let subMoney = 0;
+        let memberMoney = [
+            {name: "ndisv",qq: 1340741651,date: "9-2",quota: 6},
+            {name: "未转正的鱼咸咸",qq: 1636541569,date: "9-3",quota: 50},
+            {name: "ndisv",qq: 1340741651,date: "9-3",quota: 30},
+            {name: "千代的琪亚娜",qq: 2133649274,date: "9-3",quota: 6},
+            {name: "明月清风",qq: 1731859534,date: "9-5",quota: 50},
+            {name: "萌bao&果酱^",qq: 2756047249,date: "9-5",quota: 6},
+            {name: "博丽李梦",qq: 1257701507,date: "9-5",quota: 6},
+            {name: "萌bao&果酱^",qq: 2756047249,date: "9-5",quota: 50},
+            {name: "电脑",qq: 2179885504,date: "9-6",quota: 50},
+            {name: "冬马和纱！！！",qq: 1509885806,date: "9-6",quota: 6},
+            {name: "走天涯",qq: 1120370209,date: "9-6",quota: 6},
+            {name: "我想要陪你到终点",qq: 2840224643,date: "9-6",quota: 6},
+            {name: "冬马和纱！！！",qq: 1509885806,date: "9-6",quota: 30},
+            {name: "Y",qq: 3331386909,date: "9-7",quota: 6},
+            {name: "Y",qq: 3331386909,date: "9-7",quota: 6},
+            {name: "未转正的鱼咸咸",qq: 1636541569,date: "9-7",quota: 50},
+            {name: "Emperor",qq: 1195330012,date: "9-7",quota: 50},
+            {name: "九仙",qq: 565047123,date: "9-7",quota: 6},
+            {name: "落雪",qq: 2514225604,date: "9-7",quota: 6},
+            {name: "……",qq: 1810148909,date: "9-7",quota: 6},
+            {name: "落雪",qq: 2514225604,date: "9-7",quota: 50},
+            {name: "九仙",qq: 565047123,date: "9-7",quota: 50},
+            {name: "明月清风",qq: 1731859534,date: "9-7",quota: 50},
+            {name: "千代的琪亚娜",qq: 2133649274,date: "9-7",quota: 6},
+            {name: "C.",qq: 1046413902,date: "9-8",quota: 6},
+            {name: "乾坤一掷",qq: 2367735503,date: "9-8",quota: 6},
+            {name: "一顿饭三个馒头",qq: 2897201969,date: "9-8",quota: 6},
+            {name: "ndisv",qq: 1340741651,date: "9-8",quota: 200},
+
+        ]
+        // 根据数组自动化创建列表元素
+        function initList(){
+            let ListUl = document.querySelector("#List>ul");
+            for(let i=0;i<memberRant.length;i++){
+                let memberObj = memberRant[i];
+                subMoney+=memberObj.quota;
+                // 创建li
+                let li = document.createElement("li");
+                // 创建头像
+                let img = document.createElement("img");
+                img.classList.add("header");
+                img.src = `https://q4.qlogo.cn/g?b=qq&nk=${memberObj.qq}&s=140`;
+                // 创建信息块
+                let info = document.createElement("div");
+                info.classList.add("info");
+                    // 创建用户名
+                    let userName = document.createElement("p");
+                    userName.classList.add("userName");
+                    userName.innerText = memberObj.name;
+                    // 创建用户QQ
+                    let userqq = document.createElement("p");
+                    userqq.classList.add("qq");
+                    userqq.innerText = memberObj.qq;
+                    // 创建额度
+                    let usermoney = document.createElement("p");
+                    usermoney.classList.add("money");
+                    usermoney.innerText = memberObj.quota + "¥";
+                // 创建排行序号
+                let userindex = document.createElement("div");
+                userindex.classList.add("index");
+                userindex.innerText = i+1;
+
+                let AwardBlock = document.createElement("div");
+                AwardBlock.classList.add("AwardBlock");
+                let AwardSpan = document.createElement("span");
+                AwardSpan.innerHTML = memberObj.award;
+                AwardBlock.appendChild(AwardSpan);
+
+                // 整合元素
+                info.appendChild(userName);
+                info.appendChild(userqq);
+                info.appendChild(usermoney);
+                li.appendChild(img);
+                li.appendChild(info);
+                li.appendChild(AwardBlock);
+                li.appendChild(userindex);
+                ListUl.appendChild(li);
+            }
+            let hintTitle = document.querySelector('.hintTitle');
+            hintTitle.innerText = subMoney * 1000;
+            console.log(subMoney);
+        }
+
+        let memberRant = [];
+        // 合并记录至QQ为单位下的数据
+        function initRant(){
+            // 检索所有记录
+            for (let index = 0; index < memberMoney.length; index++) {
+                let member = memberMoney[index];
+                let isExist = false;
+                // 检索现有排行是否已经有记录
+                for (let j = 0; j < memberRant.length; j++) {
+                    let rant = memberRant[j];
+                    if(rant.qq == member.qq){
+                        rant.quota += member.quota;
+                        isExist = true;
+                        break;
+                    }
+                }
+                if(!isExist){
+                    memberRant.push(member);
+                }
+            }
+        }
+        // 对赞助数据进行排序
+        function initRantSort(){
+            memberRant = memberRant.sort(function(a,b){
+                return  b.quota - a.quota;
+            })
+        }
+        function SetAward(){
+            memberRant.forEach((item,i)=>{
+                // console.log(item,i);
+                item.award = "";
+                let index = i+1;
+                let stone = 0;
+                let package = 0;
+                if(index == 1){
+                    item.award += " <p style='color:red'><img src='./assets/icon/利维坦.png' />传奇随从【利维坦】</p>"
+                }
+
+                // if(index<=3){
+                //     item.award += " <span style='color:gold'>传奇随从【闪耀凯瑞甘】</span>"
+                // }
+
+                if(index<=10){
+                    item.award += " <p style='color:tomato'><img src='./assets/icon/弹头哥.png' />传奇随从【弹头哥】</p>"
+                }
+                if(index<=3){
+                    item.award += " <p style='color:gold'><img src='./assets/icon/死亡水晶.png' />英雄精通150飞升包</p>"
+                }
+                if(index == 1){
+                    item.award += " <p style='color:gold'><img src='./assets/icon/死亡水晶.png' />英雄精通150飞升包</p>"
+                    item.award += " <p style='color:gold'><img src='./assets/icon/死亡水晶.png' />英雄精通150飞升包</p>"
+
+                }
+                stone = (memberRant.length - i ) * 250;
+                if(index <= 3){
+                    stone += (3 - i )* 5000;
+                    stone += item.quota * 100;
+                }
+                item.award += " <p style='color:skyblue'><img src='./assets/icon/死亡水晶.png' />" + stone + "死亡水晶</p>";
+                item.award += " <p style='color:skyblue'><img src='./assets/icon/时空币.png' />" + (item.quota * 3000) + "时空币</p>";
+                item.award += " <p style='color:gold'><img src='./assets/icon/时空币.png' />" + "荣誉勋章</p>";
+                item.award += " <p style='color:gold'><img src='./assets/icon/时空币.png' />" + "[平分奖池权]</p>";
+            })
+        }
+        initRant();
+        initRantSort();
+        SetAward();
+        initList();
+    </script>
+</body>
+
+</html>

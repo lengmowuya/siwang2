@@ -4,7 +4,16 @@
 }
 body {
   background: #010816;
-  background: #000 url(https://sc2.nosdn.127.net/1/style/v4/common/main_bg_v4.jpg) no-repeat fixed center center;
+}
+body .bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: #000 url("../assets//bg//mengsk.jpg") no-repeat fixed center center;
+  filter: blur(6px);
+  z-index: -5;
 }
 #pageCenter {
   max-width: 1450px;
@@ -31,10 +40,19 @@ body {
   color: #fff;
   letter-spacing: 3px;
   text-shadow: 0 0 15px gold, 0 0 30px rgba(255, 255, 255, 0.15);
+  position: relative;
+  z-index: 999;
+  margin-bottom: 20px;
 }
 .title .main:hover {
   color: #fff;
   text-shadow: 0 0 15px #fff, 0 0 30px rgba(255, 255, 255, 0.3);
+}
+.title .logo {
+  margin-bottom: 10px;
+}
+.title .logo img {
+  width: 50%;
 }
 .title .time {
   color: #fff;
@@ -87,13 +105,6 @@ body {
 }
 .title .rantInfo .award:first-of-type {
   margin-top: 15px;
-  border-color: gold;
-}
-.title .rantInfo .award:nth-of-type(2) {
-  border-color: #c0c0c0;
-}
-.title .rantInfo .award:nth-of-type(3) {
-  border-color: #B87333;
 }
 .title .rantInfo .award.normal {
   opacity: 0.8;
@@ -115,14 +126,49 @@ body {
 }
 #List {
   border-radius: 8px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding-bottom: 50px;
-  padding-top: 50px;
   margin-bottom: 150px;
   overflow: hidden;
   position: relative;
   border: 3px solid #0068a3;
+}
+#List .awardMoney {
+  position: relative;
+  z-index: 999999;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-direction: column;
+  user-select: none;
+}
+#List .awardMoney .box {
+  position: relative;
+}
+#List .awardMoney .hintTitle {
+  color: #fff;
+  font-size: 100px;
+  position: absolute;
+  letter-spacing: 4px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  text-shadow: 0px 0px 68px blue;
+}
+#List .awardMoney .moneyInfo {
+  user-select: none;
+  margin-top: 4px;
+  color: #fff;
+}
+#List .awardMoney .hintInfo {
+  margin-top: 10px;
+  color: #fff;
+  opacity: 0.5;
+  font-size: 12px;
 }
 #List .List_image {
   width: 100%;
@@ -131,7 +177,7 @@ body {
   left: 0;
   top: 0;
   background: #010d1f;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 #List .List_image .list_topImage {
   background: url(https://sc2.nosdn.127.net/1/style/v3/common/common.png) no-repeat;
@@ -162,11 +208,12 @@ body {
 #List ul li {
   width: 80%;
   flex-grow: 1;
-  margin: 10px;
+  margin: 6px;
   border-radius: 8px;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 16px;
   border: 2px solid #4393bf99;
+  box-sizing: border-box;
   background: #010d1f99;
   position: relative;
   overflow: hidden;
@@ -174,70 +221,51 @@ body {
   transition: all 0.35s;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   min-width: 200px;
-  opacity: 0.9;
+  opacity: 1;
 }
 #List ul li:first-child {
-  padding: 16px 16px;
   width: 80%;
-  border: 4px solid gold;
 }
 #List ul li:first-child .index {
   color: gold;
   opacity: 1;
 }
-#List ul li:first-child .money {
-  color: gold !important;
-}
 #List ul li:first-child img {
   border-color: gold !important;
+  box-shadow: 0px 0px 12px gold;
 }
 #List ul li:first-child .index {
   font-size: 64px;
   font-style: italic;
   padding-right: 15px;
 }
-#List ul li:nth-child(2) {
-  padding: 16px 16px;
-  border: 4px solid #c0c0c0;
-}
 #List ul li:nth-child(2) .index {
   color: #c0c0c0;
   opacity: 1;
 }
-#List ul li:nth-child(2) .money {
-  color: #c0c0c0 !important;
-}
 #List ul li:nth-child(2) img {
   border-color: silver !important;
+  box-shadow: 0px 0px 12px silver;
 }
 #List ul li:nth-child(2) .index {
   font-size: 64px;
   font-style: italic;
   padding-right: 15px;
-}
-#List ul li:nth-child(3) {
-  padding: 16px 16px;
-  border: 4px solid #B87333;
 }
 #List ul li:nth-child(3) .index {
   color: #B87333;
   opacity: 1;
 }
-#List ul li:nth-child(3) .money {
-  color: #B87333 !important;
-}
 #List ul li:nth-child(3) img {
   border-color: #B87333 !important;
+  box-shadow: 0px 0px 12px #B87333;
 }
 #List ul li:nth-child(3) .index {
   font-size: 64px;
   font-style: italic;
   padding-right: 15px;
 }
-#List ul li:nth-child(n+11) {
-  opacity: 0.9;
-}
-#List ul li img {
+#List ul li .header {
   border-radius: 6px;
   width: 76px;
   height: 76px;
@@ -246,34 +274,58 @@ body {
 #List ul li .info {
   display: flex;
   flex-direction: column;
-  padding-left: 6px;
+  padding-left: 12px;
   width: 28%;
+  height: 81px;
+  justify-content: space-between;
 }
 #List ul li .info .userName {
   color: #fff;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
 }
 #List ul li .info .qq {
   color: #fff;
-  font-size: 12px;
+  font-size: 16px;
   opacity: 0.5;
   font-weight: normal;
+  line-height: 24px;
 }
 #List ul li .info .money {
   color: red;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: bold;
-  margin-top: 16px;
+  margin-left: 2px;
 }
 #List ul li .AwardBlock {
   width: 40%;
+  flex-shrink: 0;
   display: flex;
   color: tomato;
-  align-items: center;
-  justify-content: center;
   font-weight: bold;
   cursor: pointer;
+}
+#List ul li .AwardBlock span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#List ul li .AwardBlock span > * {
+  margin-bottom: 6px;
+  width: 50%;
+  line-height: 30px;
+  font-size: 20px;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+}
+#List ul li .AwardBlock span img {
+  width: 30px;
+  height: 30px;
+  margin-right: 4px;
+  border-radius: 6px;
 }
 #List ul li .AwardBlock span:hover {
   text-shadow: 0px 0px 6px #0068a3;
@@ -292,12 +344,6 @@ body {
   margin-right: 10px;
   user-select: none;
   transition: all 0.35s;
-}
-#List ul li:hover {
-  border-color: #56abd8;
-}
-#List ul li:hover .index {
-  opacity: 0.5;
 }
 #List ul li::after {
   content: "";
