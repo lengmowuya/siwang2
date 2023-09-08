@@ -359,10 +359,14 @@ body .bg {
 @media screen and (max-width: 480px) {
   .title .main {
     font-size: 18px;
+    margin-bottom: 0px;
   }
   #pageCenter {
     padding: 6px;
     padding-top: 20px;
+  }
+  #pageCenter .awardMoney {
+    transform: scale(0.9);
   }
   .rantInfo {
     margin-left: 15px;
@@ -374,21 +378,35 @@ body .bg {
   }
   #List ul li {
     margin: 4px;
-    padding: 4px;
+    padding: 14px;
+    flex-direction: column;
+    align-items: center;
   }
-  #List ul li img {
-    width: 46px;
-    height: 46px;
+  #List ul li .header {
+    margin-top: 6px;
+    width: 90px;
+    height: 90px;
     border-width: 2px;
   }
+  #List ul li .AwardBlock {
+    width: 100%;
+  }
+  #List ul li .AwardBlock > span > p {
+    width: 100%;
+  }
+  #List ul li .info {
+    width: 200px;
+    padding: 0;
+    align-items: center;
+  }
   #List ul li .info .userName {
-    font-size: 13px;
+    margin-top: 4px;
+    font-size: 20px;
   }
   #List ul li .info .qq {
     font-size: 10px;
   }
   #List ul li .info .money {
-    font-size: 13px;
     margin-top: 0px;
   }
   #List ul li .index {

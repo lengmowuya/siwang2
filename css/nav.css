@@ -64,3 +64,8 @@ body::-webkit-scrollbar {
 .nav ul li:hover {
   text-decoration: underline;
 }
+@media screen and (max-width: 480px) {
+  .nav .logo {
+    display: none;
+  }
+}

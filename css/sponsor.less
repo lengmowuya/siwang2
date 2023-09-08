@@ -438,11 +438,17 @@ body{
     .title{
         .main{
             font-size:18px;
+            margin-bottom: 0px;
         }
     }
     #pageCenter{
         padding:6px;
         padding-top:20px;   
+        // transform: scale(0.9);
+        .awardMoney{
+            transform: scale(0.9);
+        }
+
     }
     .rantInfo{
         margin-left:15px;
@@ -454,17 +460,37 @@ body{
             padding:4px;
             li{
                 margin:4px;
-                padding:4px;
-                img{
-                    width:46px;
-                    height:46px;
+                padding:14px;
+                flex-direction: column;
+                align-items: center;
+                .header{
+                    margin-top:6px;
+                    width:90px;
+                    height:90px;
                     border-width: 2px;
                 }
+                .AwardBlock{
+                    width: 100%;
+                    &>span{
+                        &>p{
+                            width: 100%;
+                        }
+                    }
+                }
                 .info{
+                    width:200px;
+                    padding: 0;
+                    align-items: center;
+                    // height:60px;
+                    // &>*{
+                    //     height: 14px;
+                    // }
                     .userName{
-                        font-size:13px;
+                        margin-top:4px;
+                        font-size:20px;
                     }
                     .qq{
+                        // margin-top:4px;
                         font-size:10px;
                         // float: left;
                         // position: absolute;
@@ -472,7 +498,7 @@ body{
                         // top:0;
                     }
                     .money{
-                        font-size:13px;
+                        // font-size:13px;
                         margin-top:0px;
                     }
                 }
