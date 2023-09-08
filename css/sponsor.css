@@ -124,6 +124,33 @@ body .bg {
   font-size: 18px;
   margin: 10px 0px;
 }
+@keyframes rotateInfinate {
+  0% {
+    transform: rotateZ(0deg) scale(1);
+  }
+  50% {
+    transform: rotateZ(360deg) scale(1.5);
+  }
+  100% {
+    transform: rotateZ(720deg) scale(1);
+  }
+}
+@keyframes shadowInfinate {
+  0% {
+    text-shadow: 0px 0px 68px blue;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    text-shadow: 0px 0px 168px blue;
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.2;
+    filter: blur(4px);
+  }
+  100% {
+    text-shadow: 0px 0px 68px blue;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
 #List {
   border-radius: 8px;
   max-width: 1200px;
@@ -140,13 +167,16 @@ body .bg {
   width: 100%;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 40px 20px;
   box-sizing: border-box;
   flex-direction: column;
   user-select: none;
 }
 #List .awardMoney .box {
   position: relative;
+}
+#List .awardMoney .box img {
+  animation: rotateInfinate 9s infinite forwards ;
 }
 #List .awardMoney .hintTitle {
   color: #fff;
@@ -158,6 +188,8 @@ body .bg {
   transform: translate(-50%, -50%);
   font-weight: bold;
   text-shadow: 0px 0px 68px blue;
+  transform-origin: center;
+  animation: shadowInfinate 2s infinite forwards ;
 }
 #List .awardMoney .moneyInfo {
   user-select: none;

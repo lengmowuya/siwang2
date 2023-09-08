@@ -148,7 +148,33 @@ body{
     }
 
 }
-
+@keyframes rotateInfinate {
+    0%{
+        transform: rotateZ(0deg) scale(1);
+    }
+    50%{
+        transform: rotateZ(360deg) scale(1.5);
+    }
+    100%{
+        transform: rotateZ(720deg) scale(1);
+    }
+}
+@keyframes shadowInfinate {
+    0%{
+        text-shadow: 0px 0px 68px blue;
+        transform: translate(-50%,-50%) scale(1);
+    }
+    50%{
+        text-shadow: 0px 0px 168px blue;
+        transform: translate(-50%,-50%) scale(1.5);
+        opacity: 0.2;
+        filter: blur(4px);
+    }
+    100%{
+        text-shadow: 0px 0px 68px blue;
+        transform: translate(-50%,-50%) scale(1);
+    }
+}
 #List{
     border-radius: 8px;
     max-width: 1200px;
@@ -167,12 +193,15 @@ body{
         width:100%;
         align-items: center;
         justify-content: center;
-        padding:20px;
+        padding:40px 20px;
         box-sizing: border-box;
         flex-direction: column;
         user-select: none;
         .box{
             position: relative;
+            img{
+                animation: rotateInfinate 9s infinite forwards ;
+            }
         }
         .hintTitle{
             color:#fff;
@@ -184,6 +213,8 @@ body{
             transform: translate(-50%,-50%);
             font-weight: bold;
             text-shadow: 0px 0px 68px blue;
+            transform-origin: center;
+            animation: shadowInfinate 2s infinite forwards ;
         }
         .moneyInfo{
             user-select: none;
