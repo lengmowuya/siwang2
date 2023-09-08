@@ -91,6 +91,8 @@
             {name: "一顿饭三个馒头",qq: 2897201969,date: "9-8",quota: 6},
             {name: "ndisv",qq: 1340741651,date: "9-8",quota: 200},
             {name: "Y",qq: 3331386909,date: "9-8",quota: 50},
+            {name: "勿念他歸零靜",qq: 350118735,date: "9-8",quota: 12},
+            {name: "谁戳我 谁女装",qq: 361525195,date: "9-8",quota: 500},
 
         ]
         // 根据数组自动化创建列表元素
@@ -142,9 +144,28 @@
                 ListUl.appendChild(li);
             }
             let hintTitle = document.querySelector('.hintTitle');
+            // hintTitle.innerText = numFormat(subMoney * 1000);
             hintTitle.innerText = subMoney * 1000;
             console.log(subMoney);
         }
+        // function numFormat(num){
+        //     num=num.toString().split(".");  // 分隔小数点
+        //     var arr=num[0].split("").reverse();  // 转换成字符数组并且倒序排列
+        //     var res=[];
+        //     for(var i=0,len=arr.length;i<len;i++){
+        //     if(i%3===0&&i!==0){
+        //         res.push(",");   // 添加分隔符
+        //     }
+        //     res.push(arr[i]);
+        //     }
+        //     res.reverse(); // 再次倒序成为正确的顺序
+        //     if(num[1]){  // 如果有小数的话添加小数部分
+        //     res=res.join("").concat("."+num[1]);
+        //     }else{
+        //     res=res.join("");
+        //     }
+        //     return res;
+        // }
 
         let memberRant = [];
         // 合并记录至QQ为单位下的数据

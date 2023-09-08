@@ -137,17 +137,17 @@ body .bg {
 }
 @keyframes shadowInfinate {
   0% {
-    text-shadow: 0px 0px 68px blue;
+    text-shadow: 0px 0px 4px blue ,0px 0px 68px blue;
     transform: translate(-50%, -50%) scale(1);
   }
   50% {
-    text-shadow: 0px 0px 168px blue;
+    text-shadow: 0px 0px 4px blue ,0px 0px 168px blue;
     transform: translate(-50%, -50%) scale(1.5);
     opacity: 0.2;
     filter: blur(4px);
   }
   100% {
-    text-shadow: 0px 0px 68px blue;
+    text-shadow: 0px 0px 4px blue ,0px 0px 68px blue;
     transform: translate(-50%, -50%) scale(1);
   }
 }
