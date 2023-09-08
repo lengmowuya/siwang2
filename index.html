@@ -12,18 +12,23 @@
 </head>
 
 <body>
+    <div class="bg"></div>
     <div class="nav">
+        <div class="logo"><img src="./assets//死亡空间站.png" alt=""></div>
+
         <ul>
             <!-- <li><a href="/">首页</a></li> -->
             <li><a href="/bulletin.html">公告</a></li>
-            <li class="active"><a href="/index2.html">活动</a></li>
+            <li class="active"><a href="/index.html">活动</a></li>
             <!-- <li>文档</li> -->
         </ul>   
     </div>
     <div id="pageCenter">
         <div class="title">
-            <p class="main">《死亡空间站2》赞助限时大促</p>
-            <span class="time">截止时间3月20日</span>
+            <!-- <p class="logo" style="width: 50%;"><img src="./assets//死亡空间站.png" alt=""></p> -->
+            <p class="main">《死亡空间站2》亚服赞助2.0</p>
+
+            <!-- <span class="time">截止时间3月20日</span> -->
             <!-- <div class="rantInfo">
                 <span class="white">
                 <p class="must">排行榜前10名每人一个传奇随从【奥丁】</p>
@@ -31,6 +36,20 @@
         </div>
     
         <div id="List">
+            <div class="awardMoney">
+
+                <div class="box">
+                    <img src="./assets/icon/死亡水晶.png" alt="">
+                    <p class="hintTitle">600,000</p>
+                </div>
+
+                <span class="hintInfo">
+                    奖池随全体累计赞助额度不断扩大,活动结束每个赞助玩家平分奖池
+                </span>
+                <span class="moneyInfo">
+                    倒计时：90天 20小时 40分钟
+                </span>
+            </div>
             <div class="List_image">
                 <div class="list_topImage"></div>
                 <div class="list_bottomImage"></div>
@@ -42,87 +61,35 @@
     <script>
         let subMoney = 0;
         let memberMoney = [
-            {name: "Alucky",qq: 2283557026,date: "2-25",quota: 50},
-            {name: "℃razy″小魚",qq: 1292951,date: "2-25",quota: 200},
-            {name: "孤傲‖白狼",qq: 2214919650,date: "2-26",quota: 6},
-            {name: "捷",qq: 241441453,date: "2-27",quota: 50},
-            {name: "微光",qq: 13594000659,date: "2-26",quota: 50},
-            {name: "梦醒",qq: 77235280,date: "2-26",quota: 50},
-            {name: "取名@_@好难",qq: 1393152525,date: "2-26",quota: 50},
-            {name: "四五",qq: 1915494356,date: "2-26",quota: 50},
-            {name: "哈根达斯",qq: 3057868343,date: "2-27",quota: 6},
-            {name: "西藏老干妈",qq: 2779169891,date: "2-27",quota: 6},
-            {name: "电竞少女郭德纲",qq: 1796057672,date: "2-27",quota: 50},
-            {name: "微光",qq: 13594000659,date: "2-27",quota: 50},
-            {name: "飞翔",qq: 307376721,date: "2-27",quota: 6},
-            {name: "老鼠",qq: 1140878396,date: "2-27",quota: 201},
-            {name: "飞翔",qq: 307376721,date: "2-27",quota: 6},
-            {name: "褪色传说",qq: 3502137901,date: "2-28",quota: 200},
-            {name: "烤鱼",qq: 1156094661,date: "2-28",quota: 6},
-            {name: "母胎solo,外号멍청하다.",qq: 2832677608,date: "2-28",quota: 50},
-            {name: "Alucky",qq: 2283557026,date: "2-28",quota: 150},
-            {name: "憨憨",qq: 842178110,date: "2-28",quota: 51},
-            {name: "捷",qq: 241441453,date: "2-28",quota: 50},
-            {name: "孤傲‖白狼",qq: 2214919650,date: "2-28",quota: 6},
-            {name: "俗",qq: 1719466094,date: "2-28",quota: 200},
-            {name: "秋叶之殇",qq: 2386924640,date: "3-1",quota: 6},
-            {name: "何时",qq: 3498035029,date: "3-2",quota: 6},
-            {name: "单推",qq: 3503418264,date: "3-2",quota: 6},
-            {name: "风月不及你",qq: 2088743692,date: "3-2",quota: 50},
-            {name: "Sherlock",qq: 987857181,date: "3-2",quota: 200},
-            {name: "嚼着炫迈割动脉",qq: 346834432,date: "3-3",quota: 6},
-            {name: "do it",qq: 564657624,date: "3-3",quota: 6},
-            {name: "快乐人马",qq: 250528122,date: "3-4",quota: 6},
-            {name: "邪神猫猫",qq: 3578881597,date: "3-4",quota: 10},
-            {name: "陶纯蔬菜水果",qq: 80309082,date: "3-4",quota: 6},
-            {name: "WZJ軒",qq: 2264825913,date: "3-4",quota: 20},
-            {name: "啖啖",qq: 176781821,date: "3-5",quota: 50},
-            {name: "所长",qq: 451465525,date: "3-5",quota: 6},
-            {name: "所长",qq: 451465525,date: "3-5",quota: 50},
-            {name: "UMP9",qq: 1439094848,date: "3-5",quota: 6},
-            {name: "UMP45",qq: 510571461,date: "3-5",quota: 6},
-            {name: "泛秋意.ᕕ( ᐛ )ᕗ.",qq: 1049086178,date: "3-5",quota: 50},
-            {name: "泛秋意.ᕕ( ᐛ )ᕗ.",qq: 1049086178,date: "3-5",quota: 51},
-            {name: "春酲",qq: 2357918706,date: "3-5",quota: 50},
-            {name: "小猫你在哪儿",qq: 2297116971,date: "3-6",quota: 6},
-            {name: "Winter丿梦落",qq: 1206382852,date: "3-6",quota: 6},
-            {name: "灬裂缝中的阳光灬",qq: 1677616924,date: "3-6",quota: 50},
-            {name: "Winter丿梦落",qq: 1206382852,date: "3-7",quota: 100},
-            {name: "纠缠之缘",qq: 3396838116,date: "3-7",quota: 6},
-            {name: "纠缠之缘",qq: 3396838116,date: "3-7",quota: 200},
-            {name: "灬裂缝中的阳光灬",qq: 1677616924,date: "3-7",quota: 50},
-            {name: "泛秋意.ᕕ( ᐛ )ᕗ.",qq: 1049086178,date: "3-7",quota: 108},
-            {name: "Alucky",qq: 2283557026,date: "3-7",quota: 6},
-            {name: "骑上蜗牛去兜风",qq: 2212277604,date: "3-7",quota: 50},
-            {name: "褪色传说",qq: 3502137901,date: "3-7",quota: 50},
-            {name: "片羽吉光",qq: 2061016737,date: "3-12",quota: 50},
-            {name: "山水画清风",qq: 592016919,date: "3-13",quota: 50},
-            {name: "山水画清风",qq: 592016919,date: "3-13",quota: 200},
-            {name: "悱恻",qq: 2377946307,date: "3-13",quota: 6},
-            {name: "风吹屁屁凉",qq: 794132713,date: "3-13",quota: 50},
-            {name: "纠缠之缘",qq: 3396838116,date: "3-13",quota: 250},
-            {name: "泛秋意.ᕕ( ᐛ )ᕗ.",qq: 1049086178,date: "3-13",quota: 100},
-            {name: "泛秋意.ᕕ( ᐛ )ᕗ.",qq: 1049086178,date: "3-13",quota: 200},
-            {name: "吉尔吉斯忒",qq: 2651056478,date: "3-13",quota: 50},
-            {name: "悱恻",qq: 2377946307,date: "3-14",quota: 50},
-            {name: "四五",qq: 1915494356,date: "3-14",quota: 50},
-            {name: "圣光信徒",qq: 731967613,date: "3-14",quota: 200},
-            {name: "圣光信徒",qq: 731967613,date: "3-14",quota: 50},
-            {name: "圣光信徒",qq: 731967613,date: "3-14",quota: 200},
-            {name: "圣光信徒",qq: 731967613,date: "3-16",quota: 50},
-            {name: "圣光信徒",qq: 731967613,date: "3-16",quota: 50},
-            {name: "泛秋意.ᕕ( ᐛ )ᕗ.",qq: 1049086178,date: "3-16",quota: 200},
-            {name: "鲁德卡特",qq: 1175492482,date: "3-20",quota: 6},
-            {name: "|ω・）",qq: 1467873906,date: "3-20",quota: 50},
-            {name: "一只舰队",qq: 3033993928,date: "3-20",quota: 9.1},
-            {name: "紫⃣色⃣殇⃣",qq: 289148146,date: "3-20",quota: 1000},
-            {name: "紫⃣色⃣殇⃣",qq: 289148146,date: "3-20",quota: 1000},
-            {name: "Sherlock",qq: 987857181,date: "3-20",quota: 400},
-            {name: "圣光信徒",qq: 731967613,date: "3-20",quota: 200},
-            {name: "紫⃣色⃣殇⃣",qq: 289148146,date: "3-20",quota: 1000},
-            {name: "抗",qq: 1541623053,date: "3-20",quota: 251},
-            {name: "䆐",qq: 1759670891,date: "3-20",quota: 50},
-            
+            {name: "ndisv",qq: 1340741651,date: "9-2",quota: 6},
+            {name: "未转正的鱼咸咸",qq: 1636541569,date: "9-3",quota: 50},
+            {name: "ndisv",qq: 1340741651,date: "9-3",quota: 30},
+            {name: "千代的琪亚娜",qq: 2133649274,date: "9-3",quota: 6},
+            {name: "明月清风",qq: 1731859534,date: "9-5",quota: 50},
+            {name: "萌bao&果酱^",qq: 2756047249,date: "9-5",quota: 6},
+            {name: "博丽李梦",qq: 1257701507,date: "9-5",quota: 6},
+            {name: "萌bao&果酱^",qq: 2756047249,date: "9-5",quota: 50},
+            {name: "电脑",qq: 2179885504,date: "9-6",quota: 50},
+            {name: "冬马和纱！！！",qq: 1509885806,date: "9-6",quota: 6},
+            {name: "走天涯",qq: 1120370209,date: "9-6",quota: 6},
+            {name: "我想要陪你到终点",qq: 2840224643,date: "9-6",quota: 6},
+            {name: "冬马和纱！！！",qq: 1509885806,date: "9-6",quota: 30},
+            {name: "Y",qq: 3331386909,date: "9-7",quota: 6},
+            {name: "Y",qq: 3331386909,date: "9-7",quota: 6},
+            {name: "未转正的鱼咸咸",qq: 1636541569,date: "9-7",quota: 50},
+            {name: "Emperor",qq: 1195330012,date: "9-7",quota: 50},
+            {name: "九仙",qq: 565047123,date: "9-7",quota: 6},
+            {name: "落雪",qq: 2514225604,date: "9-7",quota: 6},
+            {name: "……",qq: 1810148909,date: "9-7",quota: 6},
+            {name: "落雪",qq: 2514225604,date: "9-7",quota: 50},
+            {name: "九仙",qq: 565047123,date: "9-7",quota: 50},
+            {name: "明月清风",qq: 1731859534,date: "9-7",quota: 50},
+            {name: "千代的琪亚娜",qq: 2133649274,date: "9-7",quota: 6},
+            {name: "C.",qq: 1046413902,date: "9-8",quota: 6},
+            {name: "乾坤一掷",qq: 2367735503,date: "9-8",quota: 6},
+            {name: "一顿饭三个馒头",qq: 2897201969,date: "9-8",quota: 6},
+            {name: "ndisv",qq: 1340741651,date: "9-8",quota: 200},
+
         ]
         // 根据数组自动化创建列表元素
         function initList(){
@@ -134,6 +101,7 @@
                 let li = document.createElement("li");
                 // 创建头像
                 let img = document.createElement("img");
+                img.classList.add("header");
                 img.src = `https://q4.qlogo.cn/g?b=qq&nk=${memberObj.qq}&s=140`;
                 // 创建信息块
                 let info = document.createElement("div");
@@ -149,7 +117,7 @@
                     // 创建额度
                     let usermoney = document.createElement("p");
                     usermoney.classList.add("money");
-                    usermoney.innerText = memberObj.quota + "￥";
+                    usermoney.innerText = memberObj.quota + "¥";
                 // 创建排行序号
                 let userindex = document.createElement("div");
                 userindex.classList.add("index");
@@ -171,6 +139,8 @@
                 li.appendChild(userindex);
                 ListUl.appendChild(li);
             }
+            let hintTitle = document.querySelector('.hintTitle');
+            hintTitle.innerText = subMoney * 1000;
             console.log(subMoney);
         }
 
@@ -209,24 +179,33 @@
                 let stone = 0;
                 let package = 0;
                 if(index == 1){
-                    item.award += " <span style='color:red'>传奇随从【利维坦】</span>"
-                }
-                if(index<=3){
-                    item.award += " <span style='color:gold'>英雄经验包*3</span>"
-                }
-                if(index<=3){
-                    item.award += " <span style='color:gold'>传奇随从【闪耀凯瑞甘】</span>"
+                    item.award += " <p style='color:red'><img src='./assets/icon/利维坦.png' />传奇随从【利维坦】</p>"
                 }
 
+                // if(index<=3){
+                //     item.award += " <span style='color:gold'>传奇随从【闪耀凯瑞甘】</span>"
+                // }
+
                 if(index<=10){
-                    item.award += " <span style='color:tomato'>传奇随从【奥丁】</span>"
+                    item.award += " <p style='color:tomato'><img src='./assets/icon/弹头哥.png' />传奇随从【弹头哥】</p>"
                 }
-                stone = (memberRant.length - i )* 75;
+                if(index<=3){
+                    item.award += " <p style='color:gold'><img src='./assets/icon/死亡水晶.png' />英雄精通150飞升包</p>"
+                }
+                if(index == 1){
+                    item.award += " <p style='color:gold'><img src='./assets/icon/死亡水晶.png' />英雄精通150飞升包</p>"
+                    item.award += " <p style='color:gold'><img src='./assets/icon/死亡水晶.png' />英雄精通150飞升包</p>"
+
+                }
+                stone = (memberRant.length - i ) * 250;
                 if(index <= 3){
-                    stone+=(3 - i )* 3000;
+                    stone += (3 - i )* 5000;
+                    stone += item.quota * 100;
                 }
-                item.award += " <span style='color:skyblue'>" + stone + "死亡水晶</span>";
-                item.award += " <span style='color:gold'>" + "赞助商头衔</span>";
+                item.award += " <p style='color:skyblue'><img src='./assets/icon/死亡水晶.png' />" + stone + "死亡水晶</p>";
+                item.award += " <p style='color:skyblue'><img src='./assets/icon/时空币.png' />" + (item.quota * 3000) + "时空币</p>";
+                item.award += " <p style='color:gold'><img src='./assets/icon/时空币.png' />" + "荣誉勋章</p>";
+                item.award += " <p style='color:gold'><img src='./assets/icon/时空币.png' />" + "[平分奖池权]</p>";
             })
         }
         initRant();
