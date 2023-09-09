@@ -198,6 +198,10 @@ body{
         flex-direction: column;
         user-select: none;
         .box{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
             position: relative;
             img{
                 // box-shadow:  0px 0px 6px blue ,0px 0px 68px blue;
@@ -205,10 +209,11 @@ body{
             }
         }
         .hintTitle{
+            text-align: center;
             color:#fff;
-            font-size: 100px;
             position: absolute;
-            letter-spacing: 4px;
+            // letter-spacing: 4px;
+            width:100%;
             left:50%;
             top:50%;
             transform: translate(-50%,-50%);
@@ -216,6 +221,21 @@ body{
             text-shadow: 0px 0px 68px blue;
             transform-origin: center;
             animation: shadowInfinate 2s infinite forwards ;
+            line-height: 80px;
+            // vertical-align: middle;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            .numberMoney{
+                letter-spacing: 4px;
+                font-size: 80px;
+                margin:0px 12px;
+                font-family: '微软雅黑';
+            }
+            .small{
+                line-height: 80px;
+                font-size:40px;
+            }
         }
         .moneyInfo{
             user-select: none;
@@ -479,6 +499,22 @@ body{
         // transform: scale(0.9);
         .awardMoney{
             transform: scale(0.9);
+            .hintTitle{
+                transform: scale(0.9);
+                .numberMoney{
+                    // flex-shrink: 0;
+                    letter-spacing: 2px;
+                    font-size: 40px;
+                    margin:0px 6px;
+                }
+                .small{
+                    flex-shrink: 0;
+                    // width:200px;
+                    line-height: 80px;
+                    font-size:20px;
+                }
+            }
+
         }
 
     }

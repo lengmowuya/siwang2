@@ -95,6 +95,7 @@
             {name: "谁戳我 谁女装",qq: 361525195,date: "9-8",quota: 500},
             {name: "QJH",qq: 2647058851,date: "9-8",quota: 50},
             {name: "希尔",qq: 861973601,date: "9-9",quota: 200},
+            {name: "电脑",qq: 2179885504,date: "9-9",quota: 50},
 
         ]
         // 根据数组自动化创建列表元素
@@ -147,27 +148,27 @@
             }
             let hintTitle = document.querySelector('.hintTitle');
             // hintTitle.innerText = numFormat(subMoney * 1000);
-            hintTitle.innerText = subMoney * 1000;
+            hintTitle.innerHTML = `<p class='small'>瓜分</p> <p class='numberMoney'> ${numFormat(subMoney* 1000)}</p> <p class='small'>水晶</p>`;
             console.log(subMoney);
         }
-        // function numFormat(num){
-        //     num=num.toString().split(".");  // 分隔小数点
-        //     var arr=num[0].split("").reverse();  // 转换成字符数组并且倒序排列
-        //     var res=[];
-        //     for(var i=0,len=arr.length;i<len;i++){
-        //     if(i%3===0&&i!==0){
-        //         res.push(",");   // 添加分隔符
-        //     }
-        //     res.push(arr[i]);
-        //     }
-        //     res.reverse(); // 再次倒序成为正确的顺序
-        //     if(num[1]){  // 如果有小数的话添加小数部分
-        //     res=res.join("").concat("."+num[1]);
-        //     }else{
-        //     res=res.join("");
-        //     }
-        //     return res;
-        // }
+        function numFormat(num){
+            num=num.toString().split(".");  // 分隔小数点
+            var arr=num[0].split("").reverse();  // 转换成字符数组并且倒序排列
+            var res=[];
+            for(var i=0,len=arr.length;i<len;i++){
+            if(i%3===0&&i!==0){
+                res.push(",");   // 添加分隔符
+            }
+            res.push(arr[i]);
+            }
+            res.reverse(); // 再次倒序成为正确的顺序
+            if(num[1]){  // 如果有小数的话添加小数部分
+            res=res.join("").concat("."+num[1]);
+            }else{
+            res=res.join("");
+            }
+            return res;
+        }
 
         let memberRant = [];
         // 合并记录至QQ为单位下的数据

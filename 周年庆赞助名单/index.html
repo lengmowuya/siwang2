@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>死亡空间站-周年庆</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="https://sc2.nosdn.127.net/1/style/images/sc2.ico" type="image/x-icon"/>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>公告</li>
+            <li class="active">活动</li>
+            <li>文档</li>
+        </ul>
+    </div>
+    <!-- <div>
+        <img src="https://q4.qlogo.cn/g?b=qq&nk=3537168410&s=140" alt="">
+    </div> -->
+    <div class="title">
+        <p class="main">《死亡空间站》赞助商排行</p>
+        <span class="time">2021-08-04 0:00:00 - 冷漠乌鸦</span>
+        <div class="rantInfo">
+            《死亡空间站》1周年庆赞助活动，赞助金额为5RMB = <span class="white">150死亡水晶</span>，为平常充值通道的<span class="white">1.5倍</span>死亡水晶。
+    <span class="white"><br>[每1元赞助，附赠1000时空币] <br></span>
+    持续时间：8月4日至9月1日。
+    感谢大家的理解与支持，祝大家玩的愉快。
+        </div>
+    </div>
+
+    <div id="List">
+        <div class="List_image">
+            <div class="list_topImage"></div>
+            <div class="list_bottomImage"></div>
+        </div>
+        <ul>
+
+        </ul>
+    </div>
+    <script>
+        let memberMoney = [
+            {name: "戴眼镜的那个男孩(叔叔",qq: 2466396619,date: "8-4",quota: 200},
+            {name: "HK416（416姐姐）",qq: 2964019036,date: "8-6",quota: 50},
+            {name: "HK416（416姐姐）",qq: 2964019036,date: "8-6",quota: 50},
+            {name: "we",qq: 1034586556,date: "8-7",quota: 200},
+            {name: "恍如隔世",qq: 858930608,date: "8-7",quota: 100},
+            {name: "不合群的人",qq: 3149677496,date: "8-7",quota: 2},
+            {name: "誓言",qq: 3395420837,date: "8-5",quota: 300},
+            {name: "誓言",qq: 3395420837,date: "8-5",quota: 320},
+            {name: "流年似水",qq: 317509056,date: "8-5",quota: 130},
+            {name: "小鬼头",qq: 1970450662,date: "8-8",quota: 1000},
+            {name: "園长",qq: 5590843,date: "8-8",quota: 1500},
+            {name: "不合群的人",qq: 3149677496,date: "8-8",quota: 8},
+        ]
+        // 根据数组自动化创建列表元素
+        function initList(){
+            let ListUl = document.querySelector("#List>ul");
+            for(let i=0;i<memberRant.length;i++){
+                let memberObj = memberRant[i];
+                // 创建li
+                let li = document.createElement("li");
+                // 创建头像
+                let img = document.createElement("img");
+                img.src = `https://q4.qlogo.cn/g?b=qq&nk=${memberObj.qq}&s=140`;
+                // 创建信息块
+                let info = document.createElement("div");
+                info.classList.add("info");
+                    // 创建用户名
+                    let userName = document.createElement("p");
+                    userName.classList.add("userName");
+                    userName.innerText = memberObj.name;
+                    // 创建用户QQ
+                    let userqq = document.createElement("p");
+                    userqq.classList.add("qq");
+                    userqq.innerText = memberObj.qq;
+                    // 创建额度
+                    let usermoney = document.createElement("p");
+                    usermoney.classList.add("money");
+                    usermoney.innerText = memberObj.quota + "￥";
+                // 创建排行序号
+                let userindex = document.createElement("div");
+                userindex.classList.add("index");
+                userindex.innerText = i+1;
+                // 整合元素
+                info.appendChild(userName);
+                info.appendChild(userqq);
+                info.appendChild(usermoney);
+                li.appendChild(img);
+                li.appendChild(info);
+                li.appendChild(userindex);
+                ListUl.appendChild(li);
+            }
+
+        }
+
+        let memberRant = [];
+        // 合并记录至QQ为单位下的数据
+        function initRant(){
+            // 检索所有记录
+            for (let index = 0; index < memberMoney.length; index++) {
+                let member = memberMoney[index];
+                let isExist = false;
+                // 检索现有排行是否已经有记录
+                for (let j = 0; j < memberRant.length; j++) {
+                    let rant = memberRant[j];
+                    if(rant.qq == member.qq){
+                        rant.quota += member.quota;
+                        isExist = true;
+                        break;
+                    }
+                }
+                if(!isExist){
+                    memberRant.push(member);
+                }
+            }
+        }
+        // 对赞助数据进行排序
+        function initRantSort(){
+            memberRant = memberRant.sort(function(a,b){
+                return  b.quota - a.quota;
+            })
+        }
+        initRant();
+        initRantSort();
+        initList();
+    </script>
+</body>
+
+</html>
