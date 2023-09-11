@@ -52,8 +52,6 @@ body{
             text-shadow: 0 0 15px #fff, 0 0 30px rgb(255 255 255 / 30%);        
         }
     }
-    // background: url(https://sc2.nosdn.127.net/1/style/v4/common/nav-1.png) no-repeat;
-    // background-position: -176px -81px;
     .logo{
         img{
             width:50%;
@@ -212,7 +210,6 @@ body{
             text-align: center;
             color:#fff;
             position: absolute;
-            // letter-spacing: 4px;
             width:100%;
             left:50%;
             top:50%;
@@ -222,8 +219,9 @@ body{
             transform-origin: center;
             animation: shadowInfinate 2s infinite forwards ;
             line-height: 80px;
-            // vertical-align: middle;
             display:flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
             align-items: center;
             justify-content: center;
             .numberMoney{
@@ -233,7 +231,7 @@ body{
                 font-family: '微软雅黑';
             }
             .small{
-                line-height: 80px;
+                line-height: 40px;
                 font-size:40px;
             }
         }

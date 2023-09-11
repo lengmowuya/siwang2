@@ -196,6 +196,8 @@ body .bg {
   animation: shadowInfinate 2s infinite forwards ;
   line-height: 80px;
   display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
 }
@@ -206,7 +208,7 @@ body .bg {
   font-family: '微软雅黑';
 }
 #List .awardMoney .hintTitle .small {
-  line-height: 80px;
+  line-height: 40px;
   font-size: 40px;
 }
 #List .awardMoney .moneyInfo {
