@@ -4,6 +4,7 @@
 }
 body {
   background: #010816;
+  font-family: '微软雅黑';
 }
 body .bg {
   width: 100%;
@@ -284,7 +285,7 @@ body .bg {
 }
 #List ul li:first-child img {
   border-color: gold !important;
-  box-shadow: 0px 0px 12px gold;
+  box-shadow: 0px 0px 12px gold !important;
 }
 #List ul li:first-child .index {
   font-size: 64px;
@@ -297,7 +298,7 @@ body .bg {
 }
 #List ul li:nth-child(2) img {
   border-color: silver !important;
-  box-shadow: 0px 0px 12px silver;
+  box-shadow: 0px 0px 12px silver !important;
 }
 #List ul li:nth-child(2) .index {
   font-size: 64px;
@@ -310,7 +311,7 @@ body .bg {
 }
 #List ul li:nth-child(3) img {
   border-color: #B87333 !important;
-  box-shadow: 0px 0px 12px #B87333;
+  box-shadow: 0px 0px 12px #B87333 !important;
 }
 #List ul li:nth-child(3) .index {
   font-size: 64px;
@@ -327,7 +328,7 @@ body .bg {
   display: flex;
   flex-direction: column;
   padding-left: 12px;
-  width: 28%;
+  width: 35%;
   height: 81px;
   justify-content: space-between;
 }
@@ -360,24 +361,28 @@ body .bg {
 #List ul li .AwardBlock span {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 #List ul li .AwardBlock span > * {
   margin-bottom: 6px;
-  width: 50%;
+  width: 30%;
   line-height: 30px;
-  font-size: 20px;
+  font-size: 10px;
   vertical-align: middle;
   display: flex;
   align-items: center;
   letter-spacing: 1px;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 #List ul li .AwardBlock span img {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   margin-right: 4px;
   border-radius: 6px;
+  box-shadow: 0px 0px 12px #0068a3;
 }
 #List ul li .AwardBlock span:hover {
   text-shadow: 0px 0px 6px #0068a3;

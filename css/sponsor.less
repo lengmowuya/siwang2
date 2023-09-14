@@ -4,6 +4,7 @@
 }
 body{
     background:#010816;
+    font-family: '微软雅黑';
     .bg{
         width: 100%;
         height: 100%;
@@ -303,14 +304,9 @@ body{
             min-width: 200px;   
             opacity: 1;
 
-            &:not(&:first-child){
-                // max-width: calc(50% - 44px);
-            }
+
             &:first-child{
-                // padding:16px 16px;
                 width:80%;
-                // border:4px solid gold;
-                // background:rgba(255, 217, 0,0.1);
                 .index{
                     color:gold;
                     opacity: 1;
@@ -320,7 +316,7 @@ body{
                 }
                 img{
                     border-color:gold !important;
-                    box-shadow: 0px 0px 12px gold;
+                    box-shadow: 0px 0px 12px gold !important;
                 }
                 .index{
                     font-size:64px;
@@ -341,7 +337,7 @@ body{
                 }
                 img{
                     border-color:silver !important;
-                    box-shadow: 0px 0px 12px silver;
+                    box-shadow: 0px 0px 12px silver !important;
 
                 }
                 .index{
@@ -362,7 +358,7 @@ body{
                 }
                 img{
                     border-color:#B87333 !important;
-                    box-shadow: 0px 0px 12px #B87333;
+                    box-shadow: 0px 0px 12px #B87333 !important;
 
                 }
                 .index{
@@ -384,7 +380,7 @@ body{
                 display:flex;
                 flex-direction: column;
                 padding-left:12px;
-                width:28%;
+                width:35%;
                 height:81px;
                 // justify-content: space-between   ;
                 justify-content: space-between;
@@ -424,24 +420,29 @@ body{
                 span{
                     width:100%;
                     display:flex;
-                    flex-direction: column;
+                    flex-direction: row;
                     flex-wrap: wrap;
                     &>*{
                         margin-bottom:6px;
-                        width:50%;
+                        width:30%;
                         line-height: 30px;
-                        font-size: 20px;
+                        font-size: 10px;
                         vertical-align: middle;
                         display:flex;
                         align-items: center;
                         // justify-content: center;
                         letter-spacing: 1px;
+                        flex-direction: column;
+                        flex-grow: 0;
+                        flex-shrink: 0;
                     }
                     img{
-                        width:30px;
-                        height:30px;
+                        width:50px;
+                        height:50px;
                         margin-right:4px;
                         border-radius: 6px;
+                        // background:#0068a3;
+                        box-shadow: 0px 0px 12px #0068a3;
                     }
                     &:hover{
                         text-shadow: 0px 0px 6px #0068a3;

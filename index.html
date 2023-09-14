@@ -237,11 +237,13 @@
                     // item.award += " <p style='color:gold'><img src='./assets/icon/死亡水晶.png' />A级限定专属定制装备</p>"
                 }
                 if(index<=3  && index != 1){
-                    item.award += " <p style='color:gold'><img src='./assets/icon/死亡水晶.png' />英雄精通150飞升包</p>"
+                    item.award += " <p style='color:gold'><img src='./assets/icon/飞升.png' />英雄精通150飞升包</p>"
                 }
                 if(index == 1){
-                    item.award += " <p style='color:gold'><img src='./assets/icon/死亡水晶.png' />英雄精通150飞升包 * 3</p>"
-                    item.award += " <p style='color:gold'><img src='./assets/icon/死亡水晶.png' />SSS限定专属定制装备</p>"
+                    item.award += " <p style='color:gold'><img src='./assets/icon/飞升.png' />精通150飞升包</p>"
+                    item.award += " <p style='color:gold'><img src='./assets/icon/飞升.png' />精通150飞升包</p>"
+                    item.award += " <p style='color:gold'><img src='./assets/icon/飞升.png' />精通150飞升包</p>"
+                    item.award += " <p style='color:gold'><img src='./assets/icon/SSS.png' />SSS限定专属定制装备</p>"
 
                 }
                 stone = (memberRant.length - i ) * 250;
@@ -249,10 +251,10 @@
                     stone += (3 - i )* 5000;
                     stone += item.quota * 100;
                 }
-                item.award += " <p style='color:skyblue'><img src='./assets/icon/死亡水晶.png' />" + stone + "死亡水晶</p>";
-                item.award += " <p style='color:skyblue'><img src='./assets/icon/时空币.png' />" + (item.quota * 3000) + "时空币</p>";
+                item.award += " <p style='color:skyblue'><img src='./assets/icon/死亡水晶.png' />" + numFormat(stone) + "死亡水晶</p>";
+                item.award += " <p style='color:skyblue'><img src='./assets/icon/时空币.png' />" + numFormat(item.quota * 3000) + "时空币</p>";
                 item.award += " <p style='color:gold'><img src='./assets/icon/时空币.png' />" + "荣誉勋章</p>";
-                item.award += " <p style='color:gold'><img src='./assets/icon/时空币.png' />" + "[平分奖池权]</p>";
+                item.award += " <p style='color:gold'><img src='./assets/icon/平分.png' />" + "[平分奖池权]</p>";
             })
         }
         initRant();
