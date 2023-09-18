@@ -23,6 +23,36 @@ body .bg {
   padding: 10px;
   padding-top: 40px;
 }
+.custom {
+  max-width: 1200px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+}
+.custom img {
+  display: inline-block;
+  width: 100%;
+  border-radius: 8px;
+  border: 1.5px solid #fff;
+  box-shadow: 3px 3px 28px rgba(0, 0, 100, 0.5);
+}
+.custom .block1 {
+  flex-grow: 5;
+  flex-shrink: 5;
+  margin-right: 10px;
+  display: flex;
+}
+.custom .block1 img {
+  height: 100%;
+}
+.custom .block2 {
+  flex-grow: 4;
+  flex-shrink: 4;
+  display: flex;
+}
+.custom .block2 img {
+  height: 100%;
+}
 .title {
   text-align: center;
   max-width: 1200px;
