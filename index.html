@@ -37,10 +37,10 @@
         </div>
         <div class="custom">
             <div class="block1">
-                <img src="./assets/details/定制详情.png" alt="">
+                <img draggable="false" src="./assets/details/定制详情.png" alt="">
             </div>
             <div class="block2">
-                <img src="./assets/details/赞助详情.png" alt="">
+                <img draggable="false" src="./assets/details/赞助详情.png" alt="">
             </div>
         </div>
         <div id="List">
@@ -202,7 +202,7 @@
             }
             let hintTitle = document.querySelector('.hintTitle');
             // hintTitle.innerText = numFormat(subMoney * 1000);
-            hintTitle.innerHTML = `<p class='small'>瓜分</p> <p class='numberMoney'> ${subMoney* 1000}</p> <p class='small'>水晶</p>`;
+            hintTitle.innerHTML = `<p class='small'>平分</p> <p class='numberMoney'> ${subMoney* 1000}</p> <p class='small'>水晶</p>`;
             console.log(subMoney);
         }
         function numFormat(num){

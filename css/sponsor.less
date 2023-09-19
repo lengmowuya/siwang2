@@ -41,8 +41,17 @@ body{
         // height: 100%;
         width: 100%;
         border-radius: 8px;
-        border:1.5px solid #fff;
+        // border:1.5px solid #fff;
         box-shadow: 3px 3px 28px rgba(0,0,100,0.5);
+        transition:all 0.35s;
+        position: relative;
+        cursor:pointer;
+        user-select: none;
+        &:hover{
+            z-index: 999;
+            transform: scale(1.1);
+            box-shadow: 3px 3px 128px rgba(5, 80, 201, 0.8);
+        }
     }
     .block1{
         flex-grow: 5;
@@ -219,7 +228,9 @@ body{
     // background:#010d1f99;
     overflow: hidden;
     position: relative;
-    border:3px solid #0068a3;
+    // border:3px solid #0068a3;
+    box-shadow: 3px 3px 129px rgba(0, 38, 100, 0.8);
+
     .awardMoney{
         position: relative;
         z-index: 999999;
