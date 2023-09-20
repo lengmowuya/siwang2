@@ -12,7 +12,7 @@ body{
         left: 0;
         right: 0;
         background: #000 url("./../assets//bg//bg5.jpg") no-repeat fixed center center;
-        filter: blur(6px);
+        filter: blur(12px);
         z-index: -5;
     }
 
@@ -192,10 +192,10 @@ body{
         transform: rotateZ(0deg) scale(1);
     }
     50%{
-        transform: rotateZ(360deg) scale(1.5);
+        transform: rotateZ(0deg) scale(1.3);
     }
     100%{
-        transform: rotateZ(720deg) scale(1);
+        transform: rotateZ(0deg) scale(1);
     }
 }
 @keyframes shadowInfinate {
@@ -205,9 +205,9 @@ body{
     }
     50%{
         text-shadow:  0px 0px 4px orange ,0px 0px 168px orange;
-        transform: translate(-50%,-50%) scale(1.5);
-        opacity: 0.2;
-        filter: blur(4px);
+        transform: translate(-50%,-50%) scale(1.35);
+        opacity: 0.5;
+        filter: blur(1.5px);
     }
     100%{
         text-shadow:  0px 0px 4px orange ,0px 0px 68px orange;
@@ -246,7 +246,7 @@ body{
             position: relative;
             img{
                 // box-shadow:  0px 0px 6px blue ,0px 0px 68px blue;
-                animation: rotateInfinate 9s infinite forwards ;
+                animation: rotateInfinate 5s infinite forwards ;
             }
         }
         .hintTitle{
