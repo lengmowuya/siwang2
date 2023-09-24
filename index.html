@@ -177,6 +177,9 @@
             {name: "漓大人",qq: 365449136,date: "9-23",quota: 300},
             {name: "蛊",qq: 2270976921,date: "9-23",quota: 58},
             {name: "凄惨的回忆＂",qq: 1478697617,date: "9-23",quota: 50},
+            {name: "阿珏没睡醒",qq: 2644982732,date: "9-25",quota: 1200},
+            {name: "修勾",qq: 2377563042,date: "9-25",quota: 100},
+
         ]
         // 根据数组自动化创建列表元素
         function initList(){
@@ -287,6 +290,9 @@
                     item.award += " <p style='color:red'><img src='./assets/icon/利维坦.png' />传奇随从【利维坦】</p>"
                 }
 
+                if(index <=6){
+                    item.award += " <p style='color:red'><img src='./assets/icon/阿拉纳克.png' />限定英雄【奥法·阿拉纳克】</p>"
+                }
                 if(index<=10){
                     item.award += " <p style='color:tomato'><img src='./assets/icon/弹头哥.png' />传奇随从【弹头哥】</p>"
                 }
@@ -301,10 +307,10 @@
 
                 }
                 if(index == 2){
-                    item.award += " <p style='color:gold'><img src='./assets/icon/SSS.png' />SS专属定制装备</p>"
+                    item.award += " <p style='color:gold'><img src='./assets/icon/SSS.png' />SSS专属定制装备</p>"
                 }
                 if(index == 3){
-                    item.award += " <p style='color:gold'><img src='./assets/icon/SSS.png' />S专属定制装备</p>"
+                    item.award += " <p style='color:gold'><img src='./assets/icon/SSS.png' />SS专属定制装备</p>"
                 }
                 stone = (memberRant.length - i ) * 250;
                 if(index <= 3){
