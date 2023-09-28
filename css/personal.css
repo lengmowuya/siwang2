@@ -3,6 +3,8 @@
   padding: 0;
 }
 body {
+  width: 100vw;
+  height: 100vh;
   background: #010816;
 }
 body .activityBackground {
@@ -26,6 +28,8 @@ body .bg {
   z-index: -5;
 }
 #pageCenter {
+  width: 100%;
+  box-sizing: border-box;
   max-width: 1450px;
   min-height: 100vh;
   margin: 0 auto;
@@ -100,6 +104,7 @@ body .bg {
   top: 0;
   background: #010d1f;
   padding: 30px;
+  box-sizing: border-box;
   border-radius: 12px;
   box-shadow: 0px 0px 36px #0a54dd;
   opacity: 0.7;
@@ -326,5 +331,11 @@ body .bg {
   }
   #List ul li {
     margin: 5px;
+  }
+  #List ul li .name {
+    font-size: 14px;
+  }
+  #List ul li:nth-of-type(8n) {
+    margin-bottom: 0px;
   }
 }
