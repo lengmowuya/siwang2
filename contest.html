@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空间站-周年赞助</title>
+    <link rel="stylesheet" href="./css/contest.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="icon" href="https://sc2.nosdn.127.net/1/style/images/sc2.ico" type="image/x-icon"/>
+    <script src=".\js\unpkg.com_vue@3.3.4_dist_vue.global.js"></script>
+
+</head>
+
+<body>
+    <div class="bg"></div>
+
+    <div class="nav">
+        <div class="logo"><img src="./assets//死亡空间站.png" alt=""></div>
+
+        <ul>
+            <li><a href="/bulletin.html">公告</a></li>
+            <li ><a href="/index.html">赞助</a></li>
+            <li ><a href="/personal.html">定制</a></li>
+            <li class="active"><a href="/contest.html">竞速</a></li>
+
+            <li><a href="/invite.html">邀新</a></li>
+        </ul>   
+    </div>
+    <div id="pageCenter">
+        <div class="title">
+            <p class="main">第二届竞中秋速赛-残酷突变</p>
+            <span class="time">2021-08-13 0:00:00 - 冷漠乌鸦</span>
+            <div class="rantInfo">
+                    
+                一人至多参加3个战队,未参与战队成绩的战队成员无法获得奖励 
+
+                任何难度都可以,允许天锁,亡者,禁止专属,届时我会给地图加个竞速模式    
+                <br> 活动持续时间9月29日(中秋节) 至 10月7日。<br>
+                <p class="award">所有奖励归为队伍奖励,由战队队长自由分配</p>
+                <!-- <p class="award">第一战队:各成员2000死亡水晶 20W时空币</p>
+                <p class="award">第二战队:各成员1500死亡水晶 15W时空币</p>
+                <p class="award">第三战队:各成员1000死亡水晶 10W时空币</p>
+                <p class="award">其他战队:各成员300死亡水晶 3W时空币</p>  -->
+            </div>
+        </div>
+    
+        <div id="List">
+            <div class="List_image">
+                <div class="list_topImage"></div>
+                <div class="list_bottomImage"></div>
+            </div>
+            <ul class="contest_List">
+            </ul>
+        </div>
+    </div>
+    <script>
+        let memberMoney = [
+            {name: "暴风E军团",
+                cover_url:"暴风E军团.jpg",
+                record:{
+                    time:234,
+                    date:"暂无记录",
+                    version:"暂无记录"
+                }
+            ,r: "8-4",member:[
+                {qq:861973601},
+                {qq:2762714464},
+                {qq:1070020304},
+                {qq:1846429409},
+                {qq:1067538087},
+                // {qq:1034586556},
+                {qq:3149677496},
+                {qq:703607486},
+            ]},
+            {name: "达拉姆",
+                cover_url:"达拉姆.jpg",
+                record:{
+                    time:238,
+                    date:"暂无记录",
+                    version:"暂无记录"
+                }
+            ,r: "8-4",member:[
+                {qq:3149677496},
+                {qq:2136805093},
+                {qq:1460887992},
+                {qq:2466396619},
+                {qq:2237192961},
+                // {qq:1070020304},
+                {qq:403015696},
+                {qq:2497788207},
+            ]},
+            {name: "宿命的旋律",
+                cover_url:"宿命的旋律.png",
+                record:{
+                    time:236,
+                    date:"暂无记录",
+                    version:"暂无记录"
+                }
+            ,r: "8-4",member:[
+                {qq:703607486},
+                {qq:1067538087},
+                {qq:1970450662},
+                // {qq:1723706793},
+                // {qq:346799963},
+                {qq:2466396619},
+                {qq:1191400986},
+                {qq:403015696},
+                
+            ]},
+            {name: "强势掠夺者",
+                cover_url:"强势掠夺者.png",
+                record:{
+                    time:542,
+                    date:"暂无记录",
+                    version:"暂无记录"
+                }
+            ,r: "8-4",member:[
+                {qq:3537168410},
+                {qq:1460887992},
+                {qq:2497788207},
+                {qq:2136805093},
+            ]},
+            {name: "乌鸦后援团",
+                cover_url:"https://q4.qlogo.cn/g?b=qq&nk=3537168410&s=140",
+                record:{
+                    time:270,
+                    date:"暂无记录",
+                    version:"暂无记录"
+                }
+            ,r: "8-4",member:[
+                {qq:403015696},
+                {qq:1067538087},
+                {qq:2466396619},
+                {qq:2136805093},
+                {qq:1206471495},
+                {qq:2762714464},
+            ]},
+        ]
+        // 根据数组自动化创建列表元素
+        function initList(){
+            let ListUl = document.querySelector("#List>ul");
+            for(let i=0;i<memberMoney.length;i++){
+                let memberObj = memberMoney[i];
+                // 创建li
+                let li = document.createElement("li");
+                // 创建头像
+                let img = document.createElement("img");
+                if(memberObj.cover_url.indexOf("http") != -1){
+                    img.src = memberObj.cover_url;
+                }else{
+                    img.src = "./assets/item/"+memberObj.cover_url;
+                }
+                img.classList.add("contest_header")
+                // 创建上板块
+                // let topBlock = document.createElement("div");
+                // let bottomBlock = document.createElement("div");
+                // 创建信息块
+                let info = document.createElement("div");
+                info.classList.add("info");
+                    // 创建用户名
+                    let userName = document.createElement("p");
+                    userName.classList.add("userName");
+                    userName.innerText = "<"+memberObj.name+">";
+                    // 创建用户QQ
+                    let userqq = document.createElement("p");
+                    userqq.classList.add("qq");
+                    userqq.innerText = memberObj.qq;
+                    // 创建额度
+                    let usermoney = document.createElement("p");
+                    usermoney.classList.add("money");
+                    // usermoney.innerText = memberObj.quota + "￥";
+                    let memeber_list = document.createElement("ul");
+                    memeber_list.classList.add("member_list");
+                    for(let j=0;j<memberObj.member.length;j++){
+                        let member = memberObj.member[j];
+                        let memeber_li = document.createElement("li");
+                        let memeber_li_header = document.createElement("img");
+                        memeber_li_header.src = `https://q4.qlogo.cn/g?b=qq&nk=${member.qq}&s=140`
+                        memeber_li_header.title = 'QQ:'+member.qq;
+                        memeber_li.appendChild(memeber_li_header);
+                        memeber_list.appendChild(memeber_li);
+                    }
+                // 创建排行序号
+                let userindex = document.createElement("div");
+                userindex.classList.add("index");
+                if(memberObj.record.time>= 9999){
+                    userindex.innerText = " ";
+                }else{
+                    let min = Math.floor(memberObj.record.time / 60);
+                    let sec = memberObj.record.time - (min * 60);
+                    // userindex.innerText = memberObj.record.time + "秒";
+                    userindex.innerText = min+"分 " + sec + "秒";
+                }
+                // 整合元素
+                info.appendChild(userName);
+                info.appendChild(memeber_list);
+                // info.appendChild(userqq);
+                // info.appendChild(usermoney);
+                li.appendChild(img);
+                li.appendChild(info);
+                li.appendChild(userindex);
+                // li.appendChild(memeber_list);
+                ListUl.appendChild(li);
+            }
+
+        }
+
+
+        function setMemberList(){
+
+        }
+        
+        let memberRant = [];
+        // 合并记录至QQ为单位下的数据
+        function initRant(){
+            // 检索所有记录
+            for (let index = 0; index < memberMoney.length; index++) {
+                let member = memberMoney[index];
+                let isExist = false;
+                // 检索现有排行是否已经有记录
+                for (let j = 0; j < memberRant.length; j++) {
+                    let rant = memberRant[j];
+                    if(rant.qq == member.qq){
+                        rant.quota += member.quota;
+                        isExist = true;
+                        break;
+                    }
+                }
+                if(!isExist){
+                    memberRant.push(member);
+                }
+            }
+        }
+        // 对赞助数据进行排序
+        function initRantSort(){
+            memberMoney = memberMoney.sort(function(a,b){
+                return  a.record.time - b.record.time;
+            })
+        }
+        initRantSort();
+        // initRant();
+        initList();
+    </script>
+    <!-- <img src="http://imgs.aixifan.com/o_1ce0vqi3d6kjide1mqv1jd9n1p2v.jpg" alt=""> -->
+</body>
+
+</html>

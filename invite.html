@@ -21,6 +21,7 @@
             <li><a href="/bulletin.html">公告</a></li>
             <li ><a href="/index.html">赞助</a></li>
             <li><a href="/personal.html">定制</a></li>
+            <li><a href="/contest.html">竞速</a></li>
 
             <!-- <li><a href="/personal.html">定制</a></li> -->
             <li class="active"><a href="/invite.html">邀新</a></li>
@@ -59,7 +60,7 @@
                     只要拉人(星际玩家就行)进群就算邀新,只要退的不猛不会减少人数计算,恶意作弊者踢出榜单
                 </span>
                 <span class="moneyInfo">
-                    倒计时：20天 06小时 05分钟
+                    倒计时：10天 06小时 05分钟
                 </span>
             </div>
             <div class="List_image">
@@ -76,7 +77,7 @@
             {name: "萌bao&果酱^",qq: 2756047249,quota: 25,use:25},
             {name: "谁戳我 谁女装",qq: 361525195,quota: 3},
             {name: "德玛西亚",qq: 2567156437,quota: 4},
-            {name: "樱子",qq: 3166882510,quota: 25,use:10},
+            {name: "樱子",qq: 3166882510,quota: 26,use:25},
             {name: "可可可可可可可可可可可莉",qq: 351221793,quota: 9,use:9},
             {name: "吉尔吉斯忒",qq: 2651056478,quota: 3},
             {name: "半杯冷咖啡",qq: 3303420073,quota: 2},
@@ -195,8 +196,20 @@
                 let stone = 0;
                 let package = 0;
 
-                item.award += ` <p style='color:gold'><img src='./assets/icon/飞升.png' />${(item.quota - (item.use || 0)) * 15}¥ <span class='mini'>定制减免</span></p>`
+                item.award += ` <p style='color:gold'><img src='./assets/icon/飞升.png' />${(item.quota - (item.use || 0)) * 15}¥ <span class='mini'>剩余定制减免</span></p>`
+                if(index == 1){
+                    item.award += " <p style='color:gold'><img src='./assets/icon/SSS.png' />SSS限定专属定制装备</p>"
 
+                }
+                if(index == 2){
+                    item.award += " <p style='color:gold'><img src='./assets/icon/SSS.png' />SSS专属定制装备</p>"
+                }
+                if(index == 3){
+                    item.award += " <p style='color:gold'><img src='./assets/icon/SSS.png' />SS专属定制装备</p>"
+                }
+                if(index == 4){
+                    item.award += " <p style='color:gold'><img src='./assets/icon/SSS.png' />S专属定制装备</p>"
+                }
             })
         }
         initRant();

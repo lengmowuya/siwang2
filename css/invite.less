@@ -393,7 +393,7 @@ body{
                     width:100% !important;
                     display:inline-block;
                     display:flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     flex-wrap: nowrap;
                     &>*{
                         margin-bottom:6px;
@@ -404,7 +404,7 @@ body{
                         flex-direction: row;
                         flex-wrap: nowrap;
                         align-items: center;
-                        justify-content: center;
+                        // justify-content: center;
                         letter-spacing: 1px;
                         flex-grow: 0;
                         flex-shrink: 0;
@@ -415,6 +415,7 @@ body{
                             display:flex;
                             flex-direction: row;
                             flex-wrap: nowrap;
+
                         }
                         .mini{
                             flex-grow: 1;
@@ -424,6 +425,9 @@ body{
                             opacity: 0.8;
                             margin-left:10px;
                         }
+                    }
+                    p:nth-child(2){
+                        font-size: 20px;
                     }
                     img{
                         width:50px;

@@ -359,7 +359,7 @@ body .bg {
   width: 100% !important;
   display: inline-block;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
 }
 #List ul li .AwardBlock > span > * {
@@ -370,7 +370,6 @@ body .bg {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
   letter-spacing: 1px;
   flex-grow: 0;
   flex-shrink: 0;
@@ -390,6 +389,9 @@ body .bg {
   font-size: 16px;
   opacity: 0.8;
   margin-left: 10px;
+}
+#List ul li .AwardBlock > span p:nth-child(2) {
+  font-size: 20px;
 }
 #List ul li .AwardBlock > span img {
   width: 50px;
