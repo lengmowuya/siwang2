@@ -161,7 +161,7 @@
             {name: "1201",qq: 2389244239,date: "9-20",quota: 10},
             {name: "德玛西亚",qq: 2567156437,date: "9-21",quota: 650},
             {name: "shark",qq: 2372933404,date: "9-21",quota: 300},
-            {name: "漓大人",qq: 365449136,date: "9-21",quota: 200},
+            {name: "漓大人",qq: 365449136,date: "9-21",quota: 200,private:true},
             {name: "可可可可可可可可可可可莉",qq: 351221793,date: "9-21",quota: 235},
             {name: "萌bao&果酱^",qq: 2756047249,date: "9-21",quota: 400},
             {name: "天",qq: 417357882,date: "9-21",quota: 250},
@@ -214,6 +214,7 @@
             {name: "Elasi",qq: 1124150844,date: "10-7",quota: 1500},
             {name: "鲨鲨酱",qq: 136195612,date: "10-7",quota: 1200},
             {name: "漓大人",qq: 365449136,date: "10-1",quota: 2000},
+            {name: "。",qq: 1799732748,date: "10-1",quota: 50},
 
         ]
         // 根据数组自动化创建列表元素
@@ -227,18 +228,31 @@
                 // 创建头像
                 let img = document.createElement("img");
                 img.classList.add("header");
-                img.src = `https://q4.qlogo.cn/g?b=qq&nk=${memberObj.qq}&s=140`;
+                if(memberObj.private){
+                    img.src = `./assets/item/神秘客.png`;
+                }else{
+                    img.src = `https://q4.qlogo.cn/g?b=qq&nk=${memberObj.qq}&s=140`;
+                }
                 // 创建信息块
                 let info = document.createElement("div");
                 info.classList.add("info");
                     // 创建用户名
                     let userName = document.createElement("p");
                     userName.classList.add("userName");
-                    userName.innerText = memberObj.name;
+                    if(memberObj.private){
+                        userName.innerText = '神秘先生的神秘身份';
+                    }else{
+                        userName.innerText = memberObj.name;
+                    }
                     // 创建用户QQ
                     let userqq = document.createElement("p");
                     userqq.classList.add("qq");
-                    userqq.innerText = memberObj.qq;
+                    if(memberObj.private){
+                        userqq.innerText = '不予公开';
+
+                    }else{
+                        userqq.innerText = memberObj.qq;
+                    }
                     // 创建额度
                     let usermoney = document.createElement("p");
                     usermoney.classList.add("money");
