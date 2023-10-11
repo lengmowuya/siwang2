@@ -299,20 +299,21 @@ body .bg {
 #List ul li {
   width: 80%;
   flex-grow: 1;
+  align-items: center;
   margin: 6px;
   border-radius: 8px;
   margin-bottom: 10px;
   padding: 16px;
-  border: 2px solid #4393bf99;
   box-sizing: border-box;
-  background: #010d1f99;
   position: relative;
   overflow: hidden;
   display: flex;
   transition: all 0.35s;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   min-width: 200px;
   opacity: 1;
+  border: 2px solid #4393bf99;
+  background: #010d1f99;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 #List ul li:first-child {
   width: 80%;
@@ -325,11 +326,6 @@ body .bg {
   border-color: gold !important;
   box-shadow: 0px 0px 12px gold !important;
 }
-#List ul li:first-child .index {
-  font-size: 64px;
-  font-style: italic;
-  padding-right: 15px;
-}
 #List ul li:nth-child(2) .index {
   color: #c0c0c0;
   opacity: 1;
@@ -337,11 +333,6 @@ body .bg {
 #List ul li:nth-child(2) img {
   border-color: silver !important;
   box-shadow: 0px 0px 12px silver !important;
-}
-#List ul li:nth-child(2) .index {
-  font-size: 64px;
-  font-style: italic;
-  padding-right: 15px;
 }
 #List ul li:nth-child(3) .index {
   color: #B87333;
@@ -351,15 +342,10 @@ body .bg {
   border-color: #B87333 !important;
   box-shadow: 0px 0px 12px #B87333 !important;
 }
-#List ul li:nth-child(3) .index {
-  font-size: 64px;
-  font-style: italic;
-  padding-right: 15px;
-}
 #List ul li .header {
   border-radius: 6px;
-  width: 76px;
-  height: 76px;
+  width: 144px;
+  height: 144px;
   border: 3px solid #4393bf;
 }
 #List ul li .info {
@@ -367,13 +353,15 @@ body .bg {
   flex-direction: column;
   padding-left: 12px;
   width: 35%;
+  flex-grow: 1;
   height: 81px;
   justify-content: space-between;
 }
 #List ul li .info .userName {
   color: #fff;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 34px;
+  text-shadow: 0px 0px 6px blue;
 }
 #List ul li .info .qq {
   color: #fff;
@@ -383,27 +371,35 @@ body .bg {
   line-height: 24px;
 }
 #List ul li .info .money {
-  color: red;
-  font-size: 26px;
-  font-weight: bold;
+  color: #ffea00;
+  font-size: 20px;
+  font-style: italic;
   margin-left: 2px;
 }
 #List ul li .AwardBlock {
-  width: 40%;
+  width: 45%;
   flex-shrink: 0;
   display: flex;
   color: tomato;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
   cursor: pointer;
+  background: #03255864;
+  box-shadow: 2px 2px 8px rgba(0, 1, 81, 0.3);
+  border-radius: 12px;
+  padding: 16px;
 }
 #List ul li .AwardBlock span {
   width: 100%;
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #List ul li .AwardBlock span > * {
-  margin-bottom: 6px;
+  margin: 8px;
   width: 30%;
   line-height: 30px;
   font-size: 10px;
@@ -426,13 +422,15 @@ body .bg {
   text-shadow: 0px 0px 6px #0068a3;
 }
 #List ul li .index {
-  font-size: 46px;
+  width: 100px;
+  font-size: 64px;
   color: #fff;
   font-weight: bold;
   opacity: 0.4;
   flex-grow: 1;
-  justify-content: flex-end;
-  text-align: right;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   align-items: center;
   vertical-align: middle;
   margin-top: 10px;

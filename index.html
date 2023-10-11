@@ -220,7 +220,6 @@
             {name: "南月谣",qq: 3230411246,date: "10-1",quota: 1800},
             {name: "肝帝～江少",qq: 2123295685,date: "10-10",quota: 595},
             {name: "樱子",qq: 3166882510,date: "10-11",quota: 2300},
-
         ]
         // 根据数组自动化创建列表元素
         function initList(){
@@ -245,7 +244,7 @@
                     let userName = document.createElement("p");
                     userName.classList.add("userName");
                     if(memberObj.private){
-                        userName.innerText = '神秘先生的神秘身份';
+                        userName.innerText = '神秘客';
                     }else{
                         userName.innerText = memberObj.name;
                     }
@@ -261,7 +260,7 @@
                     // 创建额度
                     let usermoney = document.createElement("p");
                     usermoney.classList.add("money");
-                    usermoney.innerText = memberObj.quota + "¥";
+                    usermoney.innerText = memberObj.quota + "赞助";
                 // 创建排行序号
                 let userindex = document.createElement("div");
                 userindex.classList.add("index");
@@ -277,10 +276,10 @@
                 info.appendChild(userName);
                 info.appendChild(userqq);
                 info.appendChild(usermoney);
+                li.appendChild(userindex);
                 li.appendChild(img);
                 li.appendChild(info);
                 li.appendChild(AwardBlock);
-                li.appendChild(userindex);
                 ListUl.appendChild(li);
             }
             let hintTitle = document.querySelector('.hintTitle');
