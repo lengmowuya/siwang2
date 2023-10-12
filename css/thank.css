@@ -1,0 +1,395 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #010816;
+  font-family: '微软雅黑';
+}
+body .bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: #000 url("../assets//bg//mengsk.jpg") no-repeat fixed center center;
+  filter: blur(6px);
+  z-index: -5;
+}
+#pageCenter {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 10px;
+  padding-top: 40px;
+}
+.custom {
+  max-width: 1200px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+}
+.custom img {
+  display: inline-block;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 3px 3px 28px rgba(0, 0, 100, 0.5);
+  transition: all 0.35s;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.custom img:hover {
+  z-index: 999;
+  transform: scale(1.1);
+  box-shadow: 3px 3px 128px rgba(5, 80, 201, 0.8);
+}
+.custom .block1 {
+  flex-grow: 5;
+  flex-shrink: 5;
+  margin-right: 10px;
+  display: flex;
+}
+.custom .block1 img {
+  height: 100%;
+}
+.custom .block2 {
+  flex-grow: 4;
+  flex-shrink: 4;
+  display: flex;
+}
+.custom .block2 img {
+  height: 100%;
+}
+.title {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title .main {
+  font-size: 36px;
+  font-weight: bold;
+  color: #a3c9e4;
+  transition: all 0.35s;
+  color: #fff;
+  letter-spacing: 3px;
+  text-shadow: 0 0 15px gold, 0 0 30px rgba(255, 255, 255, 0.15);
+  position: relative;
+  z-index: 999;
+  margin-bottom: 20px;
+}
+.title .main:hover {
+  color: #fff;
+  text-shadow: 0 0 15px #fff, 0 0 30px rgba(255, 255, 255, 0.3);
+}
+.title .other {
+  color: #fff;
+}
+.title .logo {
+  margin-bottom: 10px;
+}
+.title .logo img {
+  width: 50%;
+}
+.title .time {
+  color: #fff;
+  font-size: 16px;
+  margin-top: 5px;
+  letter-spacing: 3px;
+  font-style: italic;
+  opacity: 0.8;
+}
+.title .rantInfo {
+  max-width: 800px;
+  border-radius: 6px;
+  border: 1px solid #29b0df;
+  background: #001b44bb;
+  color: #ccc;
+  box-shadow: 0 0 9px #0068a3;
+  margin-top: 15px;
+  padding: 10px;
+  transition: all 0.35s;
+}
+.title .rantInfo .white {
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.35s;
+}
+.title .rantInfo:hover {
+  background: #001b44dd;
+}
+.title .rantInfo:hover .white {
+  color: #fff;
+}
+.title .rantInfo .award {
+  color: gold;
+  min-width: 60%;
+  margin: 0 auto;
+  display: inline-block;
+  max-width: 95%;
+  padding: 4px 10px;
+  text-align: left;
+  background: #00000044;
+  margin: 4px 0px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 58px;
+  text-align: center;
+  line-height: 23px;
+  border: 2px solid #4393bf99;
+  overflow: hidden;
+  background: url(https://sc2.nosdn.127.net/1/style/v3/common/common.png) no-repeat;
+}
+.title .rantInfo .award:first-of-type {
+  margin-top: 15px;
+}
+.title .rantInfo .award.normal {
+  opacity: 0.8;
+}
+.title .rantInfo .award.basic {
+  opacity: 0.6;
+}
+.title .rantInfo .purple {
+  color: red;
+}
+.title .rantInfo .cyan {
+  color: cyan;
+}
+.title .rantInfo .must {
+  color: tomato;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px 0px;
+}
+@keyframes rotateInfinate {
+  0% {
+    transform: rotateZ(0deg) scale(1);
+  }
+  50% {
+    transform: rotateZ(360deg) scale(1.5);
+  }
+  100% {
+    transform: rotateZ(720deg) scale(1);
+  }
+}
+@keyframes shadowInfinate {
+  0% {
+    text-shadow: 0px 0px 4px blue ,0px 0px 68px blue;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    text-shadow: 0px 0px 4px blue ,0px 0px 168px blue;
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.2;
+    filter: blur(4px);
+  }
+  100% {
+    text-shadow: 0px 0px 4px blue ,0px 0px 68px blue;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+#List {
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  position: relative;
+}
+#List .mini {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 9999;
+}
+#List .mini li {
+  list-style: none;
+}
+#List .mini .header {
+  width: 24px;
+  height: 24px;
+  margin: 2px;
+  border-radius: 3px;
+  border: 1px solid #4393bf;
+  box-shadow: 0px 0px 3px #4393bf;
+  user-select: none;
+  transition: all 0.2s;
+}
+#List .mini .header:hover {
+  transform: scale(2);
+}
+#List .block {
+  padding: 10px 10px;
+  position: relative;
+  z-index: 99;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 3px 3px 129px rgba(0, 38, 100, 0.8);
+}
+#List .block li {
+  width: 30%;
+  flex-grow: 1;
+  align-items: center;
+  margin: 6px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 16px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  transition: all 0.35s;
+  min-width: 200px;
+  opacity: 1;
+  border: 2px solid #4393bf99;
+  background: #010d1f99;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+#List .block li .header {
+  border-radius: 6px;
+  width: 70px;
+  height: 70px;
+  border: 3px solid #4393bf;
+  box-shadow: 0px 0px 9px #4393bf;
+  transition: all 0.2s;
+}
+#List .block li .header:hover {
+  transform: scale(2);
+}
+#List .block li .info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+  width: 35%;
+  flex-grow: 1;
+  height: 81px;
+  justify-content: space-between;
+}
+#List .block li .info .userName {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 0px 0px 6px blue;
+}
+#List .block li .info .qq {
+  color: #fff;
+  font-size: 14px;
+  opacity: 0.5;
+  font-weight: normal;
+}
+#List .block li .info .money {
+  color: #ffea00;
+  font-size: 16px;
+  font-style: italic;
+  margin-left: 2px;
+}
+#List .block li .index {
+  width: 100px;
+  font-size: 64px;
+  color: #fff;
+  font-weight: bold;
+  opacity: 0.4;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  margin-top: 10px;
+  margin-right: 10px;
+  user-select: none;
+  transition: all 0.35s;
+}
+#List .block li::after {
+  content: "";
+  background: url(https://sc2.nosdn.127.net/1/style/v3/common/common.png) no-repeat;
+  width: 100%;
+  height: 160px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.95;
+  z-index: -99;
+}
+@media screen and (max-width: 480px) {
+  .title .main {
+    font-size: 18px;
+    margin-bottom: 0px;
+  }
+  #pageCenter {
+    padding: 6px;
+    padding-top: 20px;
+  }
+  #pageCenter .awardMoney {
+    transform: scale(0.9);
+  }
+  #pageCenter .awardMoney .hintTitle {
+    transform: scale(0.9);
+  }
+  #pageCenter .awardMoney .hintTitle .numberMoney {
+    letter-spacing: 2px;
+    font-size: 40px;
+    margin: 0px 6px;
+  }
+  #pageCenter .awardMoney .hintTitle .small {
+    flex-shrink: 0;
+    line-height: 80px;
+    font-size: 20px;
+  }
+  .rantInfo {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 12px;
+  }
+  #List ul {
+    padding: 4px;
+  }
+  #List ul li {
+    margin: 4px;
+    padding: 14px;
+    flex-direction: column;
+    align-items: center;
+  }
+  #List ul li .header {
+    margin-top: 6px;
+    width: 90px;
+    height: 90px;
+    border-width: 2px;
+  }
+  #List ul li .AwardBlock {
+    width: 100%;
+  }
+  #List ul li .AwardBlock > span > p {
+    width: 100%;
+  }
+  #List ul li .info {
+    width: 200px;
+    padding: 0;
+    align-items: center;
+  }
+  #List ul li .info .userName {
+    margin-top: 4px;
+    font-size: 20px;
+  }
+  #List ul li .info .qq {
+    font-size: 10px;
+  }
+  #List ul li .info .money {
+    margin-top: 0px;
+  }
+  #List ul li .index {
+    width: auto;
+    height: auto;
+    margin: 0;
+    font-size: 26px;
+    padding-right: 10px;
+  }
+}
