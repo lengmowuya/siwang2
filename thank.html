@@ -19,29 +19,31 @@
         <div class="logo"><img src="./assets//死亡空间站.png" alt=""></div>
         <ul>
             <li><a href="/bulletin.html"><i class="iconfont  icon-quanzi"></i><span>公告</span></a></li>
-            <li ><a href="/index.html"><i class="iconfont  icon-paixu"></i><span>赞助</span></a></li>
+            <!-- <li ><a href="/index.html"><i class="iconfont  icon-paixu"></i><span>赞助</span></a></li> -->
             <li><a href="/personal.html"><i class="iconfont  icon-qianbao"></i><span>定制</span></a></li>
-            <li><a href="/contest.html"><i class="iconfont  icon-qushi"></i><span>竞速</span></a></li>
+            <!-- <li><a href="/contest.html"><i class="iconfont  icon-qushi"></i><span>竞速</span></a></li> -->
             <li class="active"><a href="/thank.html"><i class="iconfont  icon-pinglun"></i><span>鸣谢</span></a></li>
         </ul>   
     </div>
 
     <div id="pageCenter">
         <div class="title">
-            <p class="logo" style="width: 50%;"><img src="./assets//死亡空间站.png" alt=""></p>
-            <!-- <p class="main">感谢您对死亡空间站的支持</p> -->
-            <p class="other">联系乌鸦在页面上留言</p>
-            <p class="other">历史赞助每人可联系乌鸦白嫖乌鸦T恤一件(空间站体恤,成本15~25)</p>
+            <!-- <p class="logo" style="width: 50%;"><img src="./assets//死亡空间站.png" alt=""></p> -->
+            <p class="main">感谢您对死亡空间站的支持</p>
+            <!-- <p class="other">联系乌鸦在页面上留言</p> -->
+            <!-- <p class="other">历史赞助每人可联系乌鸦白嫖乌鸦T恤一件(空间站体恤,成本15~25)</p> -->
         </div>
     </div>
     <div id="List">
         <ul class="mini">
             <li v-for="item in memberRant">
-                <img class="header" :src="'https://q4.qlogo.cn/g?b=qq&nk='+ item.qq + '&s=140'" alt="" class="personalMaster">
+                <a :href="'#'+item.qq">
+                    <img class="header" :src="'https://q4.qlogo.cn/g?b=qq&nk='+ item.qq + '&s=140'" alt="" class="personalMaster">
+                </a>
             </li>
         </ul>
         <ul class="block">
-            <li v-for="item in memberRant">
+            <li v-for="item in memberRant" :id="item.qq">
                 <img class="header" :src="'https://q4.qlogo.cn/g?b=qq&nk='+ item.qq + '&s=140'" alt="" class="personalMaster">
                 <div class="info">
                     <p class="userName">{{item.name}}</p>

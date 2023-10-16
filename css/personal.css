@@ -4,18 +4,8 @@
 }
 body {
   width: 100vw;
-  height: 100vh;
-  background: #010816;
-}
-body .activityBackground {
-  position: fixed;
-  left: 0;
-  bottom: 0;
   min-height: 100vh;
-  min-width: 100vw;
-  z-index: -99;
-  filter: blur(5px);
-  background: #000 url(https://sc2.nosdn.127.net/1/style/v4/common/main_bg_v4.jpg) no-repeat fixed center top;
+  background: #000;
 }
 body .bg {
   width: 100%;
@@ -23,7 +13,8 @@ body .bg {
   position: fixed;
   left: 0;
   right: 0;
-  background: #000 url("../assets//bg//bg3.jpg") no-repeat fixed top center;
+  opacity: 0.4;
+  background: url("../assets//bg//bg3.jpg") no-repeat fixed top center;
   filter: blur(12px);
   z-index: -5;
 }
@@ -34,13 +25,13 @@ body .bg {
   margin: 0 auto;
   padding: 10px;
   padding-top: 40px;
-  background: #010d1f99;
+  box-shadow: inset 0px 0px 38px #000;
 }
 .title {
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   user-select: none;
   display: flex;
   flex-direction: column;
@@ -48,7 +39,6 @@ body .bg {
 }
 .title .main {
   font-size: 48px;
-  font-weight: bold;
   color: gold;
   transition: all 0.35s;
   text-shadow: 0 0 15px #000, 0 0 30px rgba(0, 0, 0, 0.6);
@@ -59,7 +49,6 @@ body .bg {
 }
 .title .text {
   color: #fff;
-  font-weight: bold;
   text-shadow: 0 0 15px #000;
 }
 .title .time {
@@ -108,7 +97,6 @@ body .bg {
   opacity: 0.7;
 }
 #List ul {
-  padding: 10px 10px;
   position: relative;
   z-index: 99;
   list-style: none;
@@ -119,19 +107,14 @@ body .bg {
 }
 #List ul li {
   box-sizing: border-box;
-  width: 20%;
-  margin: 10px;
-  border-radius: 9px;
-  margin-bottom: 40px;
+  width: 12%;
+  border-radius: 6px;
   position: relative;
   display: flex;
   flex-direction: column;
   transition: all 0.35s;
   cursor: pointer;
   padding: 10px;
-}
-#List ul li.ur {
-  animation: urInfinate 1.8s infinite forwards;
 }
 #List ul li:hover {
   z-index: 9999;
@@ -157,14 +140,14 @@ body .bg {
   bottom: 0px;
   overflow: hidden;
   top: 0px;
-  border-radius: 9px;
-  box-shadow: 0px 0px 24px #050d35;
 }
 #List ul li .backgroundFilter .bgIcon {
   width: 100%;
-  transform: scale(3) rotateZ(180deg);
+  transform: scale(3) rotateZ(0deg);
+  transform-origin: center 15%;
   filter: blur(1px);
-  opacity: 0.2;
+  opacity: 0.15;
+  opacity: 0;
 }
 #List ul li .icon {
   border-radius: 8px;
@@ -183,28 +166,26 @@ body .bg {
   top: 0;
   transform: translate(100%, 0);
   transition: all 0.35s;
-  z-index: 99999;
+  z-index: 9999999;
 }
 #List ul li .personalInfo:hover {
   display: none !important;
 }
 #List ul li .personalMaster {
-  width: 44px;
-  height: 44px;
+  width: 30px;
+  height: 30px;
   border-radius: 4px;
-  border: 3px solid #04496e;
+  border: 1px solid #04496e;
   background: #33aced;
+  position: relative;
+  z-index: 9999;
 }
 #List ul li .name {
   color: #fff;
   text-align: center;
-  font-size: 26px;
-  margin-top: 10px;
+  font-size: 14px;
   position: relative;
-  font-weight: bold;
-  text-shadow: 2px 2px 0px #031c8a;
-  letter-spacing: 1px;
-  font-style: italic;
+  text-shadow: 1px 1px 3px #031c8a;
   border-radius: 30px;
   transition: all 0.35s;
 }
@@ -213,11 +194,11 @@ body .bg {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #001b44dd;
   box-sizing: border-box;
   overflow: hidden;
   width: 100%;
   padding-bottom: 4px;
-  padding-top: 10px;
 }
 #List ul li .info .userName {
   color: #fff;
