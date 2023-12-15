@@ -12,9 +12,6 @@ body{
         position: fixed;
         left: 0;
         right: 0;
-        // opacity: 0.9;
-        // background: #000 url("./../assets//bg//mengsk.jpg") no-repeat fixed center center;
-        // filter: blur(6px);
         z-index: -5;
     }
 
@@ -22,8 +19,6 @@ body{
 
 #pageCenter{
     max-width: 1450px;
-    // min-height: 100vh;
-    // background:rgba(0,0,0,0.7);
     margin:0 auto;
     padding:10px;
     padding-top:40px;
@@ -79,42 +74,8 @@ body{
     border-radius: 8px;
     max-width: 1200px;
     margin:0 auto;
-    // padding-bottom:50px;
-    // padding-top:50px;
     margin-bottom:150px;
-    // background:#010d1f99;
-    // overflow: hidden;
     position: relative;
-
-    .mini{
-        padding:10px;
-        display:flex;
-        flex-wrap: wrap;
-        align-items: space-between;
-        justify-content: space-between;
-        position: relative;
-        z-index:9999;
-        background:#010d1f99;
-        border-radius: 10px;
-        margin-bottom:20px;
-        li{
-            // flex-grow: 1;
-            list-style: none;
-        }
-        .header{
-            width:24px;
-            height:24px;
-            margin:4px;
-            border-radius:3px;
-            border:1px solid #4393bf;
-            box-shadow:0px 0px 3px #4393bf;
-            user-select: none;
-            transition: all 0.2s;
-            &:hover{
-                transform: scale(2);
-            }
-        }
-    }
     .block{
         padding:10px 10px;
         position: relative; 
@@ -124,50 +85,53 @@ body{
         flex-wrap: wrap;
         justify-content: space-between;
         border-radius: 10px;
-        box-shadow: 3px 3px 129px rgba(0, 38, 100, 0.8);
         li{
-            width:30%;
+            width:45%;
             display:flex;
+            flex-direction: column;
             flex-grow: 1;
+            max-width: 50%;
             align-items: center;
             margin:6px;
             border-radius: 8px;
-            // background:#010d1f99;
             margin-bottom:10px;
             padding:16px;
             box-sizing: border-box;
             position: relative;
-            // overflow: hidden;
             display:flex;
             transition:all 0.35s;
             min-width: 200px;   
             opacity: 1;
-            border:2px solid #4393bf99;
             background:#010d1f99;
             box-shadow: 2px 2px 8px rgb(0 0 0 / 30%);
-            .header{
+            .cover{
                 border-radius:6px;
-                width:70px;
-                height:70px;
+                // width:210px;
+                // height:70px;
+                width:100%;
                 border:3px solid #4393bf;
                 box-shadow:0px 0px 9px #4393bf;
                 transition: all 0.2s;
+                cursor: pointer;
                 &:hover{
-                    transform: scale(2);
+                    transform: scale(0.95);
+                    opacity: 0.8;
+
                 }
             }
             .info{
                 display:flex;
                 flex-direction: column;
-                padding-left:12px;
-                width:35%;
+                // padding-left:12px;
+                // width:35%;
                 flex-grow: 1;
-                height:81px;
+                line-height: 26px;
+                align-items: center;
                 justify-content: space-between;
                 .userName{
                     color:#fff;
                     font-weight: bold;
-                    font-size: 20px;
+                    font-size: 18px;
                     letter-spacing: 2px;
                     text-shadow: 0px 0px 6px blue;
                 }
@@ -176,6 +140,7 @@ body{
                     font-size: 14px;
                     opacity: 0.5;
                     font-weight: normal;
+                    margin-bottom:10px;
                 }
                 .money{
                     color:#ffea00;

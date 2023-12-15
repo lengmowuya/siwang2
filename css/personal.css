@@ -107,7 +107,7 @@ body .bg {
 }
 #List ul li {
   box-sizing: border-box;
-  width: 12%;
+  width: 20%;
   border-radius: 6px;
   position: relative;
   display: flex;

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空间站-周年赞助</title>
+    <link rel="stylesheet" href="./css/activity.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="icon" href="https://sc2.nosdn.127.net/1/style/images/sc2.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4271778_4ofmios5k5x.css">
+    <script src=".\js\unpkg.com_vue@3.3.4_dist_vue.global.js"></script>
+</head>
+
+
+<body>
+    <div id="app">
+        <div class="bg"></div>
+        <div class="nav">
+            <div class="logo"><img src="./assets//死亡空间站.png" alt=""></div>
+            <ul>
+                <li class="active"><a href="/activity.html"><i class="iconfont  icon-paixu"></i><span>活动</span></a></li>
+                <li><a href="/personal.html"><i class="iconfont  icon-qianbao"></i><span>展览</span></a></li>
+                <li ><a href="/thank.html"><i class="iconfont  icon-pinglun"></i><span>空间站人员</span></a></li>
+            </ul>   
+        </div>
+    
+        <div id="pageCenter">
+            <div class="title">
+                <p class="main">活动列表</p>
+            </div>
+        </div>
+        <div id="List">
+            <ul class="block">
+                    <li v-for="item in activityList" :id="item.qq">
+                        <a :href="'/' + item.href + '.html' ">
+                            <img class="cover" :src="item.imageSrc" alt="" class="personalMaster">
+                            <div class="info">
+                                <p class="userName">{{item.name}}</p>
+                                <p class="qq">{{item.date}}</p>
+                                <!-- <p class="money">历史{{item.quota}}赞助</p> -->
+                            </div>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        let activityList = [
+            {
+                name: "赞助排行榜",
+                date: "2023/12/12 至 2023/1/15",
+                quota: 6,
+                type:"火热",
+                href:"sponsor",
+                imageSrc:"https://img0.baidu.com/it/u=528326821,1781637400&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"
+            },
+            {
+                name: "英雄案征集",
+                date: "2023/12/12 至 2023/1/15",
+                quota: 6,
+                type:"火热",
+                href:"heroScheme",
+                imageSrc:"https://img.app178.com/tu/201410/5yyw3lama0q.jpg"
+            },
+            {
+                name: "邀新活动",
+                date: "2023/12/12 至 2023/1/15",
+                quota: 6,
+                type:"火热",
+                href:"invite",
+                imageSrc:"https://img0.baidu.com/it/u=1871930173,3332484706&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=800"
+            },
+        ]
+        const { createApp, ref } = Vue
+        createApp({
+        setup() {
+            const message = ref('Hello vue!');
+            return {
+                    activityList
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>

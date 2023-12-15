@@ -14,47 +14,66 @@
 
 
 <body>
-    <div class="bg"></div>
-    <div class="nav">
-        <div class="logo"><img src="./assets//死亡空间站.png" alt=""></div>
-        <ul>
-            <li><a href="/bulletin.html"><i class="iconfont  icon-quanzi"></i><span>公告</span></a></li>
-            <li ><a href="/index.html"><i class="iconfont  icon-paixu"></i><span>赞助</span></a></li>
-            <li><a href="/personal.html"><i class="iconfont  icon-qianbao"></i><span>定制</span></a></li>
-            <!-- <li><a href="/contest.html"><i class="iconfont  icon-qushi"></i><span>竞速</span></a></li> -->
-            <li class="active"><a href="/thank.html"><i class="iconfont  icon-pinglun"></i><span>鸣谢</span></a></li>
-        </ul>   
-    </div>
-
-    <div id="pageCenter">
-        <div class="title">
-            <!-- <p class="logo" style="width: 50%;"><img src="./assets//死亡空间站.png" alt=""></p> -->
-            <p class="main">感谢您对死亡空间站的支持</p>
-            <!-- <p class="other">联系乌鸦在页面上留言</p> -->
-            <!-- <p class="other">历史赞助每人可联系乌鸦白嫖乌鸦T恤一件(空间站体恤,成本15~25)</p> -->
+    <div id="app">
+        <div class="bg"></div>
+        <div class="nav">
+            <div class="logo"><img src="./assets//死亡空间站.png" alt=""></div>
+            <ul>
+                <li ><a href="/activity.html"><i class="iconfont  icon-paixu"></i><span>活动</span></a></li>
+                <li><a href="/personal.html"><i class="iconfont  icon-qianbao"></i><span>展览</span></a></li>
+                <li class="active"><a href="/thank.html"><i class="iconfont  icon-pinglun"></i><span>空间站人员</span></a></li>
+            </ul>   
         </div>
-    </div>
-    <div id="List">
-        <ul class="mini">
-            <li v-for="item in memberRant">
-                <a :href="'#'+item.qq">
+    
+        <div id="pageCenter">
+            <div class="title">
+                <!-- <p class="logo" style="width: 50%;"><img src="./assets//死亡空间站.png" alt=""></p> -->
+                <p class="main">{{memberRant.length}}位小伙伴支持</p>
+                <!-- <p class="other">联系乌鸦在页面上留言</p> -->
+                <!-- <p class="other">历史赞助每人可联系乌鸦白嫖乌鸦T恤一件(空间站体恤,成本15~25)</p> -->
+            </div>
+        </div>
+        <div id="List">
+            <ul class="development">
+                <li v-for="item in development" :id="item.qq">
                     <img class="header" :src="'https://q4.qlogo.cn/g?b=qq&nk='+ item.qq + '&s=140'" alt="" class="personalMaster">
-                </a>
-            </li>
-        </ul>
-        <ul class="block">
-            <li v-for="item in memberRant" :id="item.qq">
-                <img class="header" :src="'https://q4.qlogo.cn/g?b=qq&nk='+ item.qq + '&s=140'" alt="" class="personalMaster">
-                <div class="info">
-                    <p class="userName">{{item.name}}</p>
-                    <p class="qq">{{item.qq}}</p>
-                    <p class="money">历史{{item.quota}}赞助</p>
-                </div>
-            </li>
-        </ul>
+                    <div class="info">
+                        <p class="userName">{{item.name}}</p>
+                        <!-- <p class="qq">{{item.qq}}</p> -->
+                        <!-- <p class="money">历史{{item.quota}}赞助</p> -->
+                    </div>
+                </li>
+            </ul>
+            <!-- <ul class="mini">
+                <li v-for="item in memberRant">
+                    <a :href="'#'+item.qq">
+                        <img class="header" :src="'https://q4.qlogo.cn/g?b=qq&nk='+ item.qq + '&s=140'" alt="" class="personalMaster">
+                    </a>
+                </li>
+            </ul> -->
+            <ul class="block">
+                <li v-for="item in memberRant" :id="item.qq">
+                    <img class="header" :src="'https://q4.qlogo.cn/g?b=qq&nk='+ item.qq + '&s=140'" alt="" class="personalMaster">
+                    <div class="info">
+                        <p class="userName">{{item.name}}</p>
+                        <p class="qq">{{item.qq}}</p>
+                        <!-- <p class="money">历史{{item.quota}}赞助</p> -->
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
     <script>
         let subMoney = 0;
+        let development = [
+            {name: "冷漠乌鸦",qq: 3537168410,date: "制作人"},
+            {name: "不死的妹红",qq: 3254397357,date: "制作人"},
+            {name: "都天黑了",qq: 2420233649,date: "制作人"},
+            {name: "OB",qq: 864887253,date: "制作人"},
+            {name: "黑夜涵",qq: 1031777634,date: "制作人"},
+            {name: "YohO",qq: 358144421,date: "制作人"},
+            {name: "蔚蓝星海",qq: 460997396,date: "制作人"},
+        ]
         let memberMoney = [
             {name: "ndisv",qq: 1340741651,date: "9-2",quota: 6},
             {name: "未转正的鱼咸咸",qq: 1636541569,date: "9-3",quota: 50},
@@ -167,7 +186,8 @@
             {name: "修勾",qq: 2377563042,date: "9-25",quota: 100},
             {name: "🌧️岚の深情",qq: 1874800724,date: "9-25",quota: 1},
             {name: "南月谣",qq: 3230411246,date: "9-25",quota: 1000},
-            {name: "漓大人",qq: 365449136,date: "9-25",quota: 2000},
+            {name: "南月谣",qq: 3230411246,date: "9-25",quota: 4800},
+            {name: "漓大人",qq: 365449136,date: "12-12",quota: 2000},
             {name: "shark",qq: 2372933404,date: "9-25",quota: 500},
             {name: "Elasi",qq: 1124150844,date: "9-27",quota: 1600},
             {name: "谁戳我 谁女装",qq: 361525195,date: "9-28",quota: 700},
@@ -391,10 +411,11 @@
             initRantSort();
             console.log(memberRant);
             return {
-                    memberRant
+                    memberRant,
+                    development
                 }
             }
-        }).mount('#List')
+        }).mount('#app')
     </script>
 </body>
 

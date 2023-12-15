@@ -86,7 +86,7 @@ body .bg {
 #List .mini li {
   list-style: none;
 }
-#List .mini .header {
+#List .mini li .header {
   width: 24px;
   height: 24px;
   margin: 4px;
@@ -96,8 +96,48 @@ body .bg {
   user-select: none;
   transition: all 0.2s;
 }
-#List .mini .header:hover {
+#List .mini li .header:hover {
   transform: scale(2);
+}
+#List .development {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+#List .development li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#List .development li .header {
+  border-radius: 6px;
+  width: 70px;
+  height: 70px;
+  border: 3px solid #4393bf;
+  box-shadow: 0px 0px 9px #4393bf;
+  transition: all 0.2s;
+  background: #4393bf;
+  text-align: center;
+}
+#List .development li .header:hover {
+  transform: scale(2);
+}
+#List .development li .info {
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+#List .development li .info .userName {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 6px blue;
+  text-align: center;
 }
 #List .block {
   padding: 10px 10px;
@@ -108,10 +148,9 @@ body .bg {
   flex-wrap: wrap;
   justify-content: space-between;
   border-radius: 10px;
-  box-shadow: 3px 3px 129px rgba(0, 38, 100, 0.8);
 }
 #List .block li {
-  width: 30%;
+  width: 45%;
   flex-grow: 1;
   align-items: center;
   margin: 6px;
@@ -124,7 +163,6 @@ body .bg {
   transition: all 0.35s;
   min-width: 200px;
   opacity: 1;
-  border: 2px solid #4393bf99;
   background: #010d1f99;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
@@ -151,7 +189,7 @@ body .bg {
 #List .block li .info .userName {
   color: #fff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 2px;
   text-shadow: 0px 0px 6px blue;
 }
@@ -160,6 +198,7 @@ body .bg {
   font-size: 14px;
   opacity: 0.5;
   font-weight: normal;
+  margin-bottom: 10px;
 }
 #List .block li .info .money {
   color: #ffea00;
