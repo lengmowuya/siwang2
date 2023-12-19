@@ -12,7 +12,8 @@ body .bg {
   position: fixed;
   left: 0;
   right: 0;
-  background: #000 url("../assets//bg//mengsk.jpg") no-repeat fixed center center;
+  background: #000 url("https://news.mydrivers.com/Img/20100308/03581581.jpg") no-repeat fixed center center;
+  background-size: auto 100%;
   filter: blur(6px);
   z-index: -5;
 }
@@ -407,6 +408,7 @@ body .bg {
   box-shadow: 2px 2px 8px rgba(0, 1, 81, 0.3);
   border-radius: 12px;
   padding: 16px;
+  display: none;
 }
 #List ul li .AwardBlock span {
   width: 100%;
